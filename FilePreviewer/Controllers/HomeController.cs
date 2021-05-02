@@ -27,4 +27,12 @@ namespace FilePreviewer.Controllers
             return View();
         }
     }
+    
+    public class FileInputController : Controller
+    {
+        public ActionResult Ajax()
+        {
+            return View();
+        }
+    }
 }

@@ -21,10 +21,14 @@ namespace FilePreviewer
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
-
+            bundles.Add(new ScriptBundle("~/bundles/demo").Include(
+                      "~/Scripts/demo.js"));
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/demo.css",
+                      "~/bootstrap-fileinput/fileinput.css"
+                      ));
         }
     }
 }

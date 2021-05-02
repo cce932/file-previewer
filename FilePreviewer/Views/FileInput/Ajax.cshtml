@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Ajax";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://kit.fontawesome.com/a9d212ab10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class=sidebar>
+            <ul  id="sidebar-list" class="sidebar-list">
+                <li class="sidebar-brand">
+                    <a>
+                        BOOTSTRAP-FILEINPUT
+                        <i class=" fas fa-bars sub-icon"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a>
+                        — Top —
+                        <i class="fas fa-arrow-circle-up sub-icon"></i>
+                    </a>
+                </li>
+                @for (var i = 1; i < 13; i++)
+                {
+                    <li class="list-item">
+                        <a href=@Url.Action("Ajax","FileInput",new { id = @i })>
+                            Ajax Scenario @i
+                            <i class="fas fa-play-circle sub-icon"></i>
+                        </a>
+                    </li>
+                }
+                <li class="list-item">
+                    <a>
+                        Coment & Discussion
+                        <i class="fas fa-comment sub-icon"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a>
+                        — Bottom —
+                        <i class="fas fa-arrow-circle-down sub-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="content" class="content">
+            <div>
+                123456  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/demo")
+</body>
+
