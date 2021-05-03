@@ -1,6 +1,7 @@
 ﻿window.onload = function () {
     toggleActiveAlways();
 }
+sidebarToggle();
 
 function toggleActiveAlways() {
     const sidebarList = document.getElementById("sidebar-list");
@@ -10,4 +11,14 @@ function toggleActiveAlways() {
         let aHref = listItem.getElementsByTagName("a")[0].href;
         listItem.classList.toggle("active-always", aHref === path);
     });
+}
+
+function sidebarToggle() {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+    const sidebarBrand = document.getElementById("sidebar-brand");
+    sidebarBrand.addEventListener("click", () => {
+        sidebar.classList.toggle('toggle');
+        content.classList.toggle('toggle', sidebar.classList.contains('toggle'));
+    })
 }

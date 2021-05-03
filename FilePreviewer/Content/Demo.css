@@ -15,19 +15,31 @@
     background-color: rgb(34, 34, 34);
     display: inline-block;
     position:fixed;
+    transition: .15s margin-left;
+}
+.sidebar.toggle {
+    margin-left: -220px;
+    transition: .15 margin-left;
 }
 .sidebar-list {
     list-style: none;
     padding-inline-start: 0;
+    margin-bottom: 0;
 }
 .sidebar-brand a {
     text-decoration: none;
+    background-color: #1a1a1a; 
     color: #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1.5rem;
     font-size: 14px;
+}
+.sidebar-brand:hover a {
+    background-color: #000;
+    transition-property: background-color;
+    transition: .15s;
 }
 .list-item  a{
     text-decoration: none;
@@ -61,4 +73,18 @@
 .content {
     background-color: #808080;
     padding-left: 275px;
+    transition: .15s padding-left;
+}
+.content.toggle {
+    padding-left: 55px;
+    transition: .15s padding-left;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        padding-left: 0px;
+    }
 }
