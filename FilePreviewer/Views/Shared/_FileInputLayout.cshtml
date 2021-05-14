@@ -1,0 +1,91 @@
+﻿@{
+    var ActionName = ViewContext.RouteData.Values["action"].ToString();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://kit.fontawesome.com/a9d212ab10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="sidebar" class="sidebar">
+            <ul id="sidebar-list" class="sidebar-list">
+                <li id="sidebar-brand" class="sidebar-brand">
+                    <a>
+                        BOOTSTRAP-FILEINPUT
+                        <i class=" fas fa-bars sub-icon"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a>
+                        — Top —
+                        <i class="fas fa-arrow-circle-up sub-icon"></i>
+                    </a>
+                </li>
+                @if (ActionName == "Index")
+                {
+                    foreach (var sidebarItem in ViewBag.SidebarItems)
+                    {
+                        <li class="list-item">
+                            <a href=@Url.Action(sidebarItem.Key,"FileInput")>
+                                @sidebarItem.Value
+                                <i class="fas fa-play-circle sub-icon"></i>
+                            </a>
+                        </li>
+                    }
+                }
+                else
+                {
+                    if (ActionName == "Ajax")
+                    {
+                        foreach (var sidebarItem in ViewBag.SidebarItems)
+                        {
+                            <li class="list-item">
+                                <a href=@Url.Action(ActionName,"FileInput", new { id = sidebarItem.Key})>
+                                    @sidebarItem.Value
+                                    <i class="fas fa-play-circle sub-icon"></i>
+                                </a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        foreach (var sidebarItem in ViewBag.SidebarItems)
+                        {
+                            <li class="list-item">
+                                <a href=@("#" + sidebarItem.Key)>
+                                    @sidebarItem.Value
+                                    <i class="fas fa-play-circle sub-icon"></i>
+                                </a>
+                            </li>
+                        }
+                    }
+                }
+                <li class="list-item">
+                    <a>
+                        Comment & Discussion
+                        <i class="fas fa-comment sub-icon"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a>
+                        — Bottom —
+                        <i class="fas fa-arrow-circle-down sub-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="content" class="content">
+            @RenderBody()
+        </div>
+        </div>
+
+        @Scripts.Render("~/bundles/demo")
+</body>
+</html>
