@@ -282,6 +282,19 @@
     <Content Include="Views\FileInput\index.cshtml" />
     <Content Include="Views\FileInput\Basic.cshtml" />
     <Content Include="Views\FileInput\Advanced.cshtml" />
+    <Content Include="Views\FileInput\Resumable_Uploads.cshtml" />
+    <Content Include="Views\FileInput\File_Upload.cshtml" />
+    <Content Include="Views\FileInput\Avatar_Upload.cshtml" />
+    <Content Include="Views\FileInput\Multi_Language.cshtml" />
+    <Content Include="Views\FileInput\Theming.cshtml" />
+    <Content Include="Views\FileInput\Preview_Management.cshtml" />
+    <Content Include="Views\FileInput\File_Preview_Icons.cshtml" />
+    <Content Include="Views\FileInput\Image_Dimensions.cshtml" />
+    <Content Include="Views\FileInput\Image_Management.cshtml" />
+    <Content Include="Views\FileInput\Auto_Replace.cshtml" />
+    <Content Include="Views\FileInput\File_Count_Validation.cshtml" />
+    <Content Include="Views\FileInput\Plugin_Methods.cshtml" />
+    <Content Include="Views\FileInput\Folder_Upload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
