@@ -495,3 +495,6 @@ FodyWeavers.xsd
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,aspnetcore
+.vs/FilePreviewer/v16/.suo
+FilePreviewer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+FilePreviewer/obj/Debug/FilePreviewer.csprojAssemblyReference.cache
