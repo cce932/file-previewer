@@ -1,7 +1,7 @@
 <div class="jumbotron">
-    <div class="file-loading">
-        <input id="image-data" name="data" type="file" multiple>
-    </div>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+            <input type="file" class="file" id="image-data" name="file" id="file" />
+    </form>
 </div>
 
-@Scripts.Render("~/bundles/filePreviewer")
+@* @Scripts.Render("~/bundles/filePreviewer") *@

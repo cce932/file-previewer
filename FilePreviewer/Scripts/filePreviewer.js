@@ -3,8 +3,8 @@
 }
 
 function filePreviewerRegister() {
-    $("#image-data").fileinput({
-        uploadUrl: "http://localhost:9090/image", // need an enapoint for uploading files
-        maxFileCount: 5
-    });
+    // not using for now because fileinput needs uploadUrl
+    // only while uploadUrl exists, other features of fileinput can be access
+    // uploadUrl is a backend endpoint for uploading files but we don't have that
+    $("#image-data").fileinput()
 }
