@@ -43,29 +43,14 @@
                 }
                 else
                 {
-                    if (ActionName == "Ajax")
+                    foreach (var sidebarItem in ViewBag.SidebarItems)
                     {
-                        foreach (var sidebarItem in ViewBag.SidebarItems)
-                        {
-                            <li class="list-item">
-                                <a href=@Url.Action(ActionName,"FileInput", new { id = sidebarItem.Key})>
-                                    @sidebarItem.Value
-                                    <i class="fas fa-play-circle sub-icon"></i>
-                                </a>
-                            </li>
-                        }
-                    }
-                    else
-                    {
-                        foreach (var sidebarItem in ViewBag.SidebarItems)
-                        {
-                            <li class="list-item">
-                                <a href=@("#" + sidebarItem.Key)>
-                                    @sidebarItem.Value
-                                    <i class="fas fa-play-circle sub-icon"></i>
-                                </a>
-                            </li>
-                        }
+                        <li class="list-item">
+                            <a href=@("#" + sidebarItem.Key)>
+                                @sidebarItem.Value
+                                <i class="fas fa-play-circle sub-icon"></i>
+                            </a>
+                        </li>
                     }
                 }
                 <li class="list-item">
