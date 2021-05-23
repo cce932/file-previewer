@@ -21,12 +21,22 @@ namespace FilePreviewer
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/demo").Include(
                       "~/Scripts/demo.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/filePreviewer").Include(
+                      "~/Scripts/filePreviewer.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-fileinput").Include(
+                      "~/Scripts/fileinput.js",
+                      "~/Scripts/locales/zh-TW.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/demo.css"
+                      "~/Content/demo.css",
+                      "~/Content/bootstrap-fileinput/css/fileinput.css"
                       ));
         }
     }

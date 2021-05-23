@@ -149,85 +149,37 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FileInputController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\FilePreviewerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap-fileinput\css\fileinput-rtl.css" />
-    <Content Include="bootstrap-fileinput\css\fileinput-rtl.min.css" />
-    <Content Include="bootstrap-fileinput\css\fileinput.css" />
-    <Content Include="bootstrap-fileinput\css\fileinput.min.css" />
-    <Content Include="bootstrap-fileinput\img\loading-sm.gif" />
-    <Content Include="bootstrap-fileinput\img\loading.gif" />
-    <Content Include="bootstrap-fileinput\js\fileinput.js" />
-    <Content Include="bootstrap-fileinput\js\fileinput.min.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ar.js" />
-    <Content Include="bootstrap-fileinput\js\locales\az.js" />
-    <Content Include="bootstrap-fileinput\js\locales\bg.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ca.js" />
-    <Content Include="bootstrap-fileinput\js\locales\cr.js" />
-    <Content Include="bootstrap-fileinput\js\locales\cs.js" />
-    <Content Include="bootstrap-fileinput\js\locales\da.js" />
-    <Content Include="bootstrap-fileinput\js\locales\de.js" />
-    <Content Include="bootstrap-fileinput\js\locales\el.js" />
-    <Content Include="bootstrap-fileinput\js\locales\es.js" />
-    <Content Include="bootstrap-fileinput\js\locales\et.js" />
-    <Content Include="bootstrap-fileinput\js\locales\fa.js" />
-    <Content Include="bootstrap-fileinput\js\locales\fi.js" />
-    <Content Include="bootstrap-fileinput\js\locales\fr.js" />
-    <Content Include="bootstrap-fileinput\js\locales\gl.js" />
-    <Content Include="bootstrap-fileinput\js\locales\he.js" />
-    <Content Include="bootstrap-fileinput\js\locales\hu.js" />
-    <Content Include="bootstrap-fileinput\js\locales\id.js" />
-    <Content Include="bootstrap-fileinput\js\locales\it.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ja.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ka.js" />
-    <Content Include="bootstrap-fileinput\js\locales\kr.js" />
-    <Content Include="bootstrap-fileinput\js\locales\kz.js" />
-    <Content Include="bootstrap-fileinput\js\locales\LANG.js" />
-    <Content Include="bootstrap-fileinput\js\locales\lt.js" />
-    <Content Include="bootstrap-fileinput\js\locales\nl.js" />
-    <Content Include="bootstrap-fileinput\js\locales\no.js" />
-    <Content Include="bootstrap-fileinput\js\locales\pl.js" />
-    <Content Include="bootstrap-fileinput\js\locales\pt-BR.js" />
-    <Content Include="bootstrap-fileinput\js\locales\pt.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ro.js" />
-    <Content Include="bootstrap-fileinput\js\locales\ru.js" />
-    <Content Include="bootstrap-fileinput\js\locales\sk.js" />
-    <Content Include="bootstrap-fileinput\js\locales\sl.js" />
-    <Content Include="bootstrap-fileinput\js\locales\sr-latn.js" />
-    <Content Include="bootstrap-fileinput\js\locales\sv.js" />
-    <Content Include="bootstrap-fileinput\js\locales\th.js" />
-    <Content Include="bootstrap-fileinput\js\locales\tr.js" />
-    <Content Include="bootstrap-fileinput\js\locales\uk.js" />
-    <Content Include="bootstrap-fileinput\js\locales\uz.js" />
-    <Content Include="bootstrap-fileinput\js\locales\vi.js" />
-    <Content Include="bootstrap-fileinput\js\locales\zh-TW.js" />
-    <Content Include="bootstrap-fileinput\js\locales\zh.js" />
-    <Content Include="bootstrap-fileinput\js\plugins\piexif.js" />
-    <Content Include="bootstrap-fileinput\js\plugins\piexif.min.js" />
-    <Content Include="bootstrap-fileinput\js\plugins\sortable.js" />
-    <Content Include="bootstrap-fileinput\js\plugins\sortable.min.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fas\theme.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fas\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fas\theme.min.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fas\theme.min.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fa\theme.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fa\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fa\theme.min.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer-fa\theme.min.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer\theme.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\explorer\theme.min.css" />
-    <Content Include="bootstrap-fileinput\themes\explorer\theme.min.js" />
-    <Content Include="bootstrap-fileinput\themes\fas\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\fas\theme.min.js" />
-    <Content Include="bootstrap-fileinput\themes\fa\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\fa\theme.min.js" />
-    <Content Include="bootstrap-fileinput\themes\gly\theme.js" />
-    <Content Include="bootstrap-fileinput\themes\gly\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput-rtl.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput-rtl.min.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.min.css" />
+    <Content Include="Content\bootstrap-fileinput\img\loading-sm.gif" />
+    <Content Include="Content\bootstrap-fileinput\img\loading.gif" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fas\theme.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fas\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fas\theme.min.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fas\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.min.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.min.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fas\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fas\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fa\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fa\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\gly\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\gly\theme.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -237,32 +189,90 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="bootstrap-fileinput\CHANGE.md" />
-    <Content Include="bootstrap-fileinput\LICENSE.md" />
-    <Content Include="bootstrap-fileinput\package.json" />
-    <Content Include="bootstrap-fileinput\README.md" />
-    <Content Include="bootstrap-fileinput\scss\fileinput-rtl.scss" />
-    <Content Include="bootstrap-fileinput\scss\fileinput.scss" />
-    <Content Include="bootstrap-fileinput\scss\themes\explorer-fas\theme.scss" />
-    <Content Include="bootstrap-fileinput\scss\themes\explorer-fa\theme.scss" />
-    <Content Include="bootstrap-fileinput\scss\themes\explorer\theme.scss" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\demo.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\filePreviewer.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-fileinput\scss\themes\explorer\theme.scss" />
+    <Content Include="Content\bootstrap-fileinput\scss\themes\explorer-fa\theme.scss" />
+    <Content Include="Content\bootstrap-fileinput\scss\themes\explorer-fas\theme.scss" />
+    <Content Include="Content\bootstrap-fileinput\scss\fileinput.scss" />
+    <Content Include="Content\bootstrap-fileinput\scss\fileinput-rtl.scss" />
+    <None Include="Scripts\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\fileinput.js" />
+    <Content Include="Scripts\fileinput.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.js" />
+    <Content Include="Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.5.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\locales\ar.js" />
+    <Content Include="Scripts\locales\az.js" />
+    <Content Include="Scripts\locales\bg.js" />
+    <Content Include="Scripts\locales\ca.js" />
+    <Content Include="Scripts\locales\cr.js" />
+    <Content Include="Scripts\locales\cs.js" />
+    <Content Include="Scripts\locales\da.js" />
+    <Content Include="Scripts\locales\de.js" />
+    <Content Include="Scripts\locales\el.js" />
+    <Content Include="Scripts\locales\es.js" />
+    <Content Include="Scripts\locales\et.js" />
+    <Content Include="Scripts\locales\fa.js" />
+    <Content Include="Scripts\locales\fi.js" />
+    <Content Include="Scripts\locales\fr.js" />
+    <Content Include="Scripts\locales\gl.js" />
+    <Content Include="Scripts\locales\he.js" />
+    <Content Include="Scripts\locales\hu.js" />
+    <Content Include="Scripts\locales\id.js" />
+    <Content Include="Scripts\locales\it.js" />
+    <Content Include="Scripts\locales\ja.js" />
+    <Content Include="Scripts\locales\ka.js" />
+    <Content Include="Scripts\locales\kr.js" />
+    <Content Include="Scripts\locales\kz.js" />
+    <Content Include="Scripts\locales\LANG.js" />
+    <Content Include="Scripts\locales\lt.js" />
+    <Content Include="Scripts\locales\lv.js" />
+    <Content Include="Scripts\locales\nl.js" />
+    <Content Include="Scripts\locales\no.js" />
+    <Content Include="Scripts\locales\pl.js" />
+    <Content Include="Scripts\locales\pt-BR.js" />
+    <Content Include="Scripts\locales\pt.js" />
+    <Content Include="Scripts\locales\ro.js" />
+    <Content Include="Scripts\locales\ru.js" />
+    <Content Include="Scripts\locales\sk.js" />
+    <Content Include="Scripts\locales\sl.js" />
+    <Content Include="Scripts\locales\sr-latn.js" />
+    <Content Include="Scripts\locales\sv.js" />
+    <Content Include="Scripts\locales\th.js" />
+    <Content Include="Scripts\locales\tr.js" />
+    <Content Include="Scripts\locales\uk.js" />
+    <Content Include="Scripts\locales\uz-cyrl.js" />
+    <Content Include="Scripts\locales\uz.js" />
+    <Content Include="Scripts\locales\vi.js" />
+    <Content Include="Scripts\locales\zh-TW.js" />
+    <Content Include="Scripts\locales\zh.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugins\piexif.js" />
+    <Content Include="Scripts\plugins\piexif.min.js" />
+    <Content Include="Scripts\plugins\sortable.js" />
+    <Content Include="Scripts\plugins\sortable.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -295,23 +305,14 @@
     <Content Include="Views\FileInput\File_Count_Validation.cshtml" />
     <Content Include="Views\FileInput\Plugin_Methods.cshtml" />
     <Content Include="Views\FileInput\Folder_Upload.cshtml" />
+    <Content Include="Views\FilePreviewer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -331,7 +332,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1692</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1692/</IISUrl>
+          <IISUrl>http://localhost:16952/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
