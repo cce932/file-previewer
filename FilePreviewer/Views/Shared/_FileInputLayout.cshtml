@@ -10,6 +10,7 @@
     <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
     
     @Styles.Render("~/Content/css")
+    @RenderSection("Styles",required: false)
     @*@Scripts.Render("~/bundles/jquery")*@
     <script src="https://kit.fontawesome.com/a9d212ab10.js" crossorigin="anonymous"></script>
 </head>
@@ -29,29 +30,14 @@
                         <i class="fas fa-arrow-circle-up sub-icon"></i>
                     </a>
                 </li>
-                @if (ActionName == "Index")
+                @foreach (var sidebarItem in ViewBag.SidebarItems)
                 {
-                    foreach (var sidebarItem in ViewBag.SidebarItems)
-                    {
-                        <li class="list-item">
-                            <a href=@Url.Action(sidebarItem.Key,"FileInput")>
-                                @sidebarItem.Value
-                                <i class="fas fa-play-circle sub-icon"></i>
-                            </a>
-                        </li>
-                    }
-                }
-                else
-                {
-                    foreach (var sidebarItem in ViewBag.SidebarItems)
-                    {
-                        <li class="list-item">
-                            <a href=@("#" + sidebarItem.Key)>
-                                @sidebarItem.Value
-                                <i class="fas fa-play-circle sub-icon"></i>
-                            </a>
-                        </li>
-                    }
+                <li class="list-item" name=@(sidebarItem.Key.ToLower())>
+                    <a href=@("#" + sidebarItem.Key.ToLower() )>
+                        @sidebarItem.Value
+                        <i class="fas fa-play-circle sub-icon"></i>
+                    </a>
+                </li>
                 }
                 <li class="list-item">
                     <a>
@@ -70,8 +56,13 @@
         <div id="content" class="content">
             @RenderBody()
         </div>
-        </div>
+    </div>
 
-        @Scripts.Render("~/bundles/demo")
+    @Scripts.Render("~/bundles/jquery") @* must be placed in front of bootstrap-fileinput *@
+    @Scripts.Render("~/bundles/bootstrap-fileinput")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/demo")
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>

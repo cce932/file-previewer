@@ -1,1 +1,59 @@
-﻿
+﻿@section Scripts{
+    @Scripts.Render("~/bundle/themeJs")
+    }
+
+<div id="font-awesome" class="container mb-5">
+    <h1> Font Awesome Theme  </h1>
+    <hr />
+    <p>
+        You can configure and build your own themes and layouts by loading your theme JS file and setting the<code>theme</code> property. This example shows how you can use the built in alternative Font Awesome Theme. You need to load the<code>themes/fa/theme.js</code> file. Note that the FONT AWESOME CSS and ASSETS need to be loaded before the theme CSS. Then set the<code>theme</code> property to the theme name that you use in the theme configuration file. To set your own custom theme, you must configure the$.fn.fileInputThemes["<theme-name>"] within the theme JS file.
+</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fa" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="font-awesome-alt" class="container mb-5">
+    <h1>Font Awesome Theme (Alt) </h1>
+    <hr />
+    <p> Variation of the Font Awesome theme with hidden thumbnail content. For each of the preview thumbnails, this setting will only display the file name and file size as defined in the layout templates. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fa-1" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="font-awesome-5" class="container mb-5">
+    <h1>Font Awesome 5 Theme </h1>
+    <hr />
+    <p>You can configure and build your own themes and layouts by loading your theme JS file and setting the <code>theme</code> property. This example shows how you can use the built in alternative Font Awesome 5 Theme. You need to load the <code>themes/fas/theme.js</code> file. Note that the FONT AWESOME 5 CSS and ASSETS need to be loaded before the theme CSS.  Then set the <code>theme</code> property to the theme name that you use in the theme configuration file. To set your own custom theme, you must configure the <code>$.fn.fileInputThemes["&lt;theme-name>"]</code> within the theme JS file.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fas" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="font-awesome-5-alt" class="container mb-5">
+    <h1>Font Awesome 5 Theme (Alt) </h1>
+    <hr />
+    <p> Variation of the Font Awesome 5 theme with hidden thumbnail content. For each of the preview thumbnails, this setting will only display the file name and file size as defined in the layout templates. Note that the FONT AWESOME 5 CSS and ASSETS need to be loaded before the theme CSS.  </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fas-1" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="glyphicons" class="container mb-5">
+    <h1>Glyphicons Theme  </h1>
+    <hr />
+    <p>This is the Bootstrap 3.x Glyphicons theme. You need the Glyphicons CSS library to be loaded on your page for rendering this theme properly. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-gly" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="glyphicons-alt" class="container mb-5">
+    <h1>Glyphicons Theme 1  </h1>
+    <hr />
+    <p>Variation of the Glyphicons theme with hidden thumbnail content. This will only display the file name and file size as defined in the layout templates. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-gly-1" name="input-gly-1[]" type="file" multiple>
+    </form>
+</div>

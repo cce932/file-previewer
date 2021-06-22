@@ -1,1 +1,101 @@
-﻿
+﻿<div id="advanced1" class="container mb-5">
+    <h1>Advance Example 1</h1>
+    <hr />
+    <p>Set maximum file upload size to 100 KB. Display preview on load with preset files/images and captions with overwriteInitial set to false. So the initial preview is always displayed when additional files are overwritten (useful for multiple upload) scenario. Check how the initial preview config can allow file thumbnails to include actions for delete and download (via the delete url (url) and the download url (downloadUrl). The file name for download is automatically displayed as the caption setting. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-a1">Planets and Satellites</label>
+        <input id="input-a1" name="files" type="file" multiple />
+    </form>
+</div>
+
+<div id="advanced2" class="container mb-5">
+    <h1>Advance Example 2</h1>
+    <hr />
+    <p>Similar configuration to scenario 1, but with overwriteInitial set to true that will overwrite files in the initial preview on selection. This scenario shows how you can set a different file name than the caption for your file actions. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-a2">Planets and Satellites</label>
+        <input id="input-a2" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced3" class="container mb-5">
+    <h1>Advance Example 3</h1>
+    <hr />
+    <p> Display the widget as a single block button. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a3" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced4" class="container mb-5">
+    <h1>Advance Example 4</h1>
+    <hr />
+    <p> Show only image files for selection & preview. Control button labels, styles, and icons for the browse, upload, and remove buttons.  </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a4" name="files" type="file" accept="image/*" multiple>
+    </form>
+</div>
+
+<div id="advanced5" class="container mb-5">
+    <h1>Advance Example 5</h1>
+    <hr />
+    <p> Preview section control. Change preview background and allow text files ONLY for selection as well as preview. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a5" name="files" type="file" accept="text/plain" multiple>
+    </form>
+</div>
+
+<div id="advanced6" class="container mb-5">
+    <h1>Advance Example 6</h1>
+    <hr />
+    <p>  Advanced customization using templates. For example, change position of buttons from right to left.  </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a6" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced7" class="container mb-5">
+    <h1>Advance Example 7</h1>
+    <hr />
+    <p>Using plugin methods to alter input at runtime. For example, click the Modify button to disable the plugin and change plugin options. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a7" name="files" type="file" class="file" multiple>
+        <button type="button" class="btn btn-warning btn-modify">Modify</button>
+    </form>
+</div>
+
+<div id="advanced8" class="container mb-5">
+    <h1>Advance Example 8</h1>
+    <hr />
+    <p>Allow only image and video file types to be uploaded. You can configure the condition for validating the file types using <code>fileTypeSettings</code>. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a8" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced9" class="container mb-5">
+    <h1>Advance Example 9</h1>
+    <hr />
+    <p>Allow only specific file extensions. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a9" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced10" class="container mb-5">
+    <h1>Advance Example 10</h1>
+    <hr />
+    <p>Disable preview and customize your own error container and messages. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a10" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="advanced-11" class="container mb-5">
+    <h1>Advance Example 11</h1>
+    <hr />
+    <p>Control maximum size of file that can be previewed by setting maxFilePreviewSize in KB (kilo bytes). This example sets the maximum preview file size to <code>10240 KB (10 MB)</code>. The default value for <code>maxFilePreviewSize</code> if not set is <code>25600 KB (25 MB)</code>. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-a11" name="files" type="file" multiple>
+    </form>
+</div>

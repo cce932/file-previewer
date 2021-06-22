@@ -1,1 +1,55 @@
-﻿
+﻿<div id="custom-preview-icons1" class="container mb-5">
+    <h1>Custom Preview Icons 1 </h1>
+    <hr />
+    <p>Disable preview of content for all file types and instead show file type icons. This example shows how you can set custom icons for the following file types: <code>docx, xlsx, pptx, jpg, pdf, zip</code>. This example uses <a href="http://fortawesome.github.io/Font-Awesome/icons/">font-awesome icons</a> to generate the file icons. So to test these examples, you must have the font-awesome css loaded. However, you can use bootstrap provided glyphicons OR any other icon framework OR image markup to generate the file type thumbnails. This example also shows how you can override the default <a href="http://plugins.krajee.com/file-input#option-previewfileicon">previewFileIcon</a>.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-1" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="custom-preview-icons2" class="container mb-5">
+    <h1>Custom Preview Icons 2 </h1>
+    <hr />
+    <p>Advanced variation of scenario 1 that includes ability to auto derive icons for multiple file extensions via function callback. Set <a href="http://plugins.krajee.com/file-input#option-previewfileextsettings">previewFileExtSettings</a> with the same keys as set in <a href="http://plugins.krajee.com/file-input#option-previewfileiconsettings">previewFileIconSettings</a>.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-2" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="custom-preview-icons3" class="container mb-5">
+    <h1>Custom Preview Icons 3 </h1>
+    <hr />
+    <p>Variation of scenario 1 to display file content in preview for certain file types (e.g. image & text) but disallow others to be previewed (and show only iconic thumbnails). </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-3" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="custom-preview-icons4" class="container mb-5">
+    <h1>Custom Preview Icons 4 </h1>
+    <hr />
+    <p>Variation of scenario 3 to use mime types to configure the list of allowed preview types. You can set <a href="http://plugins.krajee.com/file-input#option-allowedpreviewmimetypes">allowedPreviewMimeTypes</a> for this use case. This example considers previewing content of only JPEG Images and Javascript files.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-4" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="custom-preview-icons5" class="container mb-5">
+    <h1>Custom Preview Icons 5</h1>
+    <hr />
+    <p>Advanced preview with different configurations for normal thumbnails and zoomed file content. For example, show only an iconic preview for thumbnails, but display detailed content for zoomed content. One can set <a href="http://plugins.krajee.com/file-input#option-prefericonicpreview">preferIconicPreview</a> boolean property for this use case. This will use <a href="http://plugins.krajee.com/file-input#option-previewfileiconsettings">previewFileIconSettings</a> to first detect and display an icon, else the file content will be used for preview where possible. The zoomed preview will however display the complete content for the use case.</p>
+    <p>For an example of using iconic preview for thumbnails in initial preview, refer the <a href="http://plugins.krajee.com/file-preview-management-demo#preview-iconic">preview management demo</a>.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-5" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="custom-preview-icons6" class="container mb-5">
+    <h1>Custom Preview Icons 6</h1>
+    <hr />
+    <p>Variation (reverse scenario) of <a href="#custom-preview-icons-5">scenario 5</a> to show detailed content for thumbnails but prefer iconic preview for zoomed content. For example, show only an iconic preview for thumbnails, but display detailed content for zoomed content. One can set <a href="http://plugins.krajee.com/file-input#option-prefericoniczoompreview">preferIconicZoomPreview</a> boolean property for this use case.</p>    <p>For an example of using iconic preview for thumbnails in initial preview, refer the <a href="http://plugins.krajee.com/file-preview-management-demo#preview-iconic">preview management demo</a>.</p>
+    <p>For an example of using iconic preview for thumbnails in initial preview, refer the <a href="http://plugins.krajee.com/file-preview-management-demo#preview-iconic">preview management demo</a>.</p>
+    <form class="file-loading" action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-ficons-6" name="files" multiple type="file">
+    </form>
+</div>

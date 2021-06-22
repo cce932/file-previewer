@@ -1,1 +1,33 @@
-﻿
+﻿@section Scripts{
+    @Scripts.Render("~/bundle/langJs")
+    }
+<div id="russian-input" class="container mb-5">
+    <h1> FileInput In Russian </h1>
+    <hr />
+    <p> Setting a Russian File upload widget. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label class="control-label">Выберите Файл</label>
+        <input id="input-ru" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="french-input" class="container mb-5">
+    <h1> FileInput In French </h1>
+    <hr />
+    <p> Setting a French File upload widget. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label class="control-label">Sélectionnez Fichier</label>
+        <input id="input-fr" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="portugese-br-input" class="container mb-5">
+    <h1> FileInput In Portugese (BR)  </h1>
+    <hr />
+    <p> Setting a Portugese (Brazilian) File upload widget. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label class="control-label">Selecione O Arquivo</label>
+        <input id="input-pt-br" name="files" type="file" multiple>
+    </form>
+</div>
+

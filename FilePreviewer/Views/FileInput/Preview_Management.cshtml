@@ -1,1 +1,100 @@
-﻿
+﻿@section Scripts{
+    @Scripts.Render("~/bundle/themeJs")
+}
+
+@* 使用於reverse-preview-order，不過因為它會渲染到其他種的樣式，所以先註解掉。 
+    @section Styles{
+    @Styles.Render("~/Theme/css") 
+    }
+    *@
+
+<div id="initial-preview-data" class="container mb-5">
+    <h1> Initial Preview Data   </h1>
+    <hr />
+    <p>Various methods to manage your preview. The following features are demonstrated in this example:</p>
+    <ul>
+        <li><p>The <code>initialPreviewAsData</code> property is set to <code>true</code>. This allows you to just pass only the data in the <code>initialPreview</code> property, and not the entire markup (a feature available from v4.3.2 of the plugin). The data will be automatically parsed and markup rendered using <code>previewTemplates</code> based on the preview file type.</p></li>
+        <li><p>The <code>initialPreviewConfig</code> property has additional configurations from v4.3.2. You can configure the file type for the plugin to auto pick up the template to display each file. If this is not set the default <code>initialPreviewFileType</code> property will be used (which defaults to <code>image</code>).</p></li>
+        <li><p>Ability to zoom and check a detailed preview/slideshow for various types of files. For the example below the image, video, pdf, text, and html types are demonstrated.</p></li>
+        <li><p>Various zoom preview features. Check the borderless maximizing of screen, full screen preview, and hide header features in the zoom content. Auto navigate between preview thumbnails using the indicators or keyboard left / right buttons. Note also that freshly selected files (via browse/drag-drop) can also be zoomed in combination with the initial preview.</p></li>
+        <li><p>Ability to reorder and sort/rearrange initial preview content. Check the drag indicator on left bottom to drag the thumbnails and rearrange them. </p></li>
+        <li><p>Trap your modified file stack in initial preview via <code>filesorted</code> event (the plugin outputs this as a console log for this example). You can also get this by reading the <code>initialPreviewConfig</code> property of the plugin for getting the latest sorted data.</p></li>
+    </ul>
+    <p>
+        <span class="badge bg-info">NOTE</span>:
+    </p>
+    <ul>
+        <li>
+            <p>
+                This example also shows how you can configure the download feature alternatively by providing the universal URL <samp><a href="/file-input/plugin-options#initialPreviewDownloadUrl">initialPreviewDownloadUrl</a></samp> for
+                downloading the files. You can also provide the <code>{filename}</code> token/tag which will be dynamically replaced with the <code>filename</code> property
+                if set (or the <code>caption</code> property) within each thumbnail setting in <samp><a href="/file-input/plugin-options#initialPreviewConfig">initialPreviewConfig</a></samp>. You can override the download button to be
+                not shown for specific thumbnails by setting <code>downloadUrl</code> to <code>false</code> within <samp><a href="/file-input/plugin-options#initialPreviewConfig">initialPreviewConfig</a></samp>.
+            </p>
+        </li>
+        <li><p><span class="badge bg-success">NEW</span> This example also shows how to setup preview of OFFICE document files (Word, Excel, Powerpoint) within initial preview (feature available from plugin release v4.4.6).</p></li>
+    </ul>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-pd" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="initial-preview-raw" class="container mb-5">
+    <h1> Initial Preview Raw </h1>
+    <hr />
+    <p>An alternative of previous demo scenario where you can setup a raw markup in initialPreview instead of data. You set the <code>initialPreviewAsData</code> property to <code>false</code> and proceed just like in plugin versions prior to v4.3.2.</p>
+    <p>
+        This example also shows how you can configure the download feature alternatively by providing the universal URL  <samp><a href="/file-input/plugin-options#initialPreviewDownloadUrl">initialPreviewDownloadUrl</a></samp> for
+        downloading the files. You can also provide the <code>{key}</code> token/tag which will be dynamically replaced with the <code>key</code> property within each
+        thumbnail setting in <samp><a href="/file-input/plugin-options#initialPreviewConfig">initialPreviewConfig</a></samp>. You can override the download button to be not shown for specific thumbnails by setting
+        <code>downloadUrl</code> to <code>false</code> within <samp><a href="/file-input/plugin-options#initialPreviewConfig">initialPreviewConfig</a></samp>.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-pr" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="initial-preview-advanced" class="container mb-5">
+    <h1> Initial Preview Advanced  </h1>
+    <hr />
+    <p>Configure advanced properties in <code>initialPreviewConfig</code>. Combine both data and raw markup by setting the <code>previewAsData</code> boolean property for each file config. In addition set <code>type</code> at config level to identify the preview template and <code>filetype</code> for specific templates like the video.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-pa" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="initial-preview-iconic" class="container mb-5">
+    <h1>Initial Preview Iconic </h1>
+    <hr />
+    <p>A variation of above scenario to show ICONIC thumbnails in initial preview, but detailed content in the zoomed preview. This scenario combines the iconic preview for initial preview data. Also check, how you can pass and set both <code>caption</code> as well as a <code>filename</code> for each file in your <code>initialPreviewConfig</code>. The <code>filename</code> is useful in parsing the file's extension and its template and is used for rendering the iconic preview in this case. The <code>caption</code> will be displayed below each thumbnail and will be used by default as the filename in case the <code>filename</code> is not configured.</p>
+    <p>For examples of using other iconic previews refer the <a href="http://plugins.krajee.com/file-preview-icons-demo#custom-preview-icons-5">iconic preview demo # 5</a> or <a href="http://plugins.krajee.com/file-preview-icons-demo#custom-preview-icons-6">iconic preview demo # 6</a>.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-iconic" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="reverse-preview-order" class="container mb-5">
+    <h1>Reverse Preview Order </h1>
+    <hr />
+    <p>Reversing the order of files displayed in the preview with latest one on the top. You need to set <code><samp><a href="/file-input/plugin-options#reversePreviewOrder">reversePreviewOrder</a></samp></code> to <code>true</code></p>
+    <p>This example also uses the <b>Krajee Explorer Font Awesome Theme</b>, where this reverse order setting maybe more pertinent for the user.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-pr-rev" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="pdf-preview" class="container mb-5">
+    <h1>PDF Preview  </h1>
+    <hr />
+    <p>An example of special PDF rendering using the <a href="https://mozilla.github.io/pdf.js/" target="_blank">PDF JS</a> library only for iOS &amp; Android devices and IE11 browser platforms. You need to set the <samp><a href="/file-input/plugin-options#pdfRendererUrl">pdfRendererUrl</a></samp> property to the PDF JS Viewer Library URL on your same web server. Note that CROSS ORIGIN Requests may not be supported depending on your CORS configuration, so the PDF JS Viewer library can only be used to preview PDF files hosted out of your server (OR files picked via file input at runtime).</p>
+    <p>You can check how files both in <samp><a href="/file-input/plugin-options#initialPreview">initialPreview</a></samp> as well as normal preview at runtime are both rendered via the <a href="https://mozilla.github.io/pdf.js/" target="_blank">PDF JS</a> library.</p>
+    <p>Note that the PDF JS Rendering library in this example is enabled only for rendering on iOS &amp; Android devices and IE11 browser platforms. This is controlled by the <samp><a href="/file-input/plugin-options#usePdfRenderer">usePdfRenderer</a></samp> setting which defaults to the following callback:</p>
+    <pre class="prettyprint prettyprinted" style=""><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> isIE11 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">!!</span><span class="pln">window</span><span class="pun">.</span><span class="typ">MSInputMethodContext</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">!!</span><span class="pln">document</span><span class="pun">.</span><span class="pln">documentMode</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">!!</span><span class="pln">navigator</span><span class="pun">.</span><span class="pln">userAgent</span><span class="pun">.</span><span class="pln">match</span><span class="pun">(</span><span class="str">/(iPod|iPhone|iPad|Android)/</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> isIE11</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="file-kv-pdf" name="files" type="file" multiple>
+    </form>
+</div>

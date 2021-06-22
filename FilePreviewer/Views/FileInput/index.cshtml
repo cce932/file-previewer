@@ -1,1 +1,147 @@
-﻿
+﻿<div id="basic" class="container mb-5">
+    <h1>Basic Usage </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Basic","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Basic usage examples of the<b> bootstrap-fileinput</b> plugin.</p>
+</div>
+
+<div id="advanced" class="container mb-5">
+    <h1> Advanced Usage  </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Advanced","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Advanced usage examples of the<b> bootstrap-fileinput</b> plugin. .</p>
+</div>
+
+<div id="resumable_uploads" class="container mb-5">
+    <h1> Resumable Usage  </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Resumable_Uploads","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Configuring advanced resumable / chunk  ajax based uploads for the <b>bootstrap-fileinput</b> plugin. Refer the <a href="/file-input#ajax-resumable">resumable uploads section</a> for overview on setting up resumable / chunk uploads.</p>
+</div>
+
+<div id="folder_upload" class="container mb-5">
+    <h1> Folder Upload  </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Folder_Upload","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Upload files recursively within folders using <code>webkitdirectory</code>. This feature is supported only by a few modern browsers like Chrome and IE Edge. To use this feature, one must use the file picker button (i.e. the Browse button) to select folder(s). <b>Note:</b> This feature is not available via drag and drop.</p>
+</div>
+
+<div id="avatar_upload" class="container mb-5">
+    <h1>Avatar Upload </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Avatar_Upload","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>An example to show how you can use the plugin to manage an user profile picture upload (or an avatar). This is achieved with a simple form based upload scenario. The example shows how you can set a default user profile picture (or a previously saved picture) using <code>defaultPreviewContent</code>. Next, you can show a quick avatar upload widget by setting <code>showCaption</code> to <code>false</code>. The  <code>main1</code> layout is thus disabled and <code>main2</code> layout is used. The close button for preview can be hidden by setting <code>showClose</code> to <code>false</code>. You can then tweak other labels and CSS class properties. You can also add your own custom buttons to the <code>layoutTemplates.main2</code> template for managing the picture. A custom error container identifier can be set to display your file validation errors.</p>
+</div>
+
+<div id="multi_language" class="container mb-5">
+    <h1>Multi Language</h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Multi_Language","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>The fileinput plugin supports rendering of multiple language widgets on the same page. To do this, follow these simple steps:</p>
+    <ul>
+        <li><p>Load all the respective locale JS files for the locale languages you need (e.g. <code>js/locales/ru.js</code> for Russian). These must be loaded after the <code>fileinput.js</code>.</p></li>
+        <li><p>Set the <code>language</code> property in the plugin to the language you need (e.g. <code>'ru'</code>).</p></li>
+    </ul>
+</div>
+
+<div id="theming" class="container mb-5">
+    <h1> Theming   </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Theming","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>With release v4.3.2, the fileinput plugin supports advanced theming and ability to have separate themes for multiple widgets on the same page. To do this, follow these simple steps:</p>
+    <ul>
+        <li><p>Load respective theme JS file(s) that you need (e.g. <code>themes/fa/theme.js</code> for Font Awesome theme). The theme file(s) must be loaded after the <code>fileinput.js</code>.</p></li>
+        <li><p>Set the <code>theme</code> property in the plugin to the theme you need and which you have setup in your theme configuration JS file above (e.g. <code>'fa'</code>).</p></li>
+        <li><p>The plugin will automatically read the theme configuration for the theme name from <code>$.fn.fileinputThemes['&lt;theme-name&gt;']</code> from the JS file (e.g. via <code>$.fn.fileinputThemes['&lt;theme-name&gt;']</code>).</p></li>
+        <li><p>The plugin will automatically also prepend the CSS selector <code>theme-&lt;theme-name&gt;</code> to the file input container, so that you can override your styles. The CSS for such themes can be submitted by community in <code>themes/THEME_NAME</code> folder of the repo.</p></li>
+        <li><p>You can additionally load any theme specific CSS files if needed.</p></li>
+    </ul>
+    <div class="bs-callout bs-callout-info"><h4>Note</h4>Currently the plugin includes the Font Awesome and Glyphicons themes. More advanced themes may be added in future or can be contributed here by the community.</div>
+</div>
+
+
+<div id="preview_management" class="container mb-5">
+    <h1> Preview Management  </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Preview_Management","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>With release v4.3.2, the fileinput plugin includes advanced preview layout management, easily set initial preview with just the data instead of complete markup, sorting and rearranging initial preview, and zooming content in a slideshow format (with borderless/full-screen support).</p>
+</div>
+
+<div id="file_preview_icons" class="container mb-5">
+    <h1> File Preview Icons </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("File_Preview_Icons","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>You may want to show custom icons based on file type for each preview thumbnail instead of embedding file content OR the default <a href="http://plugins.krajee.com/file-input#option-previewfileicon">previewFileIcon</a>. The plugin provides you with the ability to set different user friendly file type icons to be shown within the file thumbnail instead of the default <a href="http://plugins.krajee.com/file-input#option-previewfileicon">previewFileIcon</a>. This method also has an added advantage of an <b>improved performance</b>, since in this method the plugin does not incur the overhead of FileAPI reading and displaying the file content for preview. It is also useful, when you want to display icons for each file type instead of displaying content within the files. You must set the <a href="http://plugins.krajee.com/file-input#option-previewfileiconsettings">previewFileIconSettings</a> to set the file type icon for each file extension. <b>Note</b>: For this to be effective, you must configure <a href="http://plugins.krajee.com/file-input#option-allowedpreviewtypes">allowedPreviewTypes</a> AND / OR <a href="http://plugins.krajee.com/file-input#option-allowedpreviewmimetypes">allowedPreviewMimeTypes</a>. These will enable you to allow the parsing of embedded content only for these selected file types and display file type icons for the rest. You can also configure <a href="http://plugins.krajee.com/file-input#option-previewfileextsettings">previewFileExtSettings</a> for advanced scenarios to auto-derive extensions via a callback.</p>
+</div>
+
+<div id="image_dimensions" class="container mb-5">
+    <h1>Image Dimensions </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Image_Dimensions","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Demonstration for validating image dimensions when you are uploading image files. This is applicable only for image files and if <code>showPreview</code> is <code>true</code>.</p>
+</div>
+
+<div id="image_management" class="container mb-5">
+    <h1>  Image Management </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Image_Management","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    Demonstration for managing and manipulating images before upload. Currently auto-orientation of JPEG images (CSS styles) and resizing of images (width or height) is supported as part of image management before upload. The following are the pre-requisites for image management:
+    <ul>
+        <li><p>This is applicable only for image files being uploaded and if <a href="https://plugins.krajee.com/file-input/plugin-options#showPreview"><samp>showPreview</samp></a> is <code>true</code>. </p></li>
+        <li><p>The resize will only be possible if the image is displayed in the preview window. Note that based on <a href="https://plugins.krajee.com/file-input/plugin-options#maxFilePreviewSize"><samp>maxFilePreviewSize</samp></a> setting, the plugin will not display the file in preview, if the file size exceeds  <a href="https://plugins.krajee.com/file-input/plugin-options#maxFilePreviewSize"><samp>maxFilePreviewSize</samp></a>.</p></li>
+        <li><p>This feature is only supported for ajax based file uploads.</p></li>
+        <li><p>The browser must support HTML 5 canvas features and methods.</p></li>
+        <li><p>You must load the <a href="https://github.com/hMatoba/piexifjs" target="_blank">Piexifjs plugin by hMatoba</a> before the <code>fileinput.js</code> script. This plugin is provided in the <code>js/plugins</code> folder of the repo for easy access.</p></li>
+        <li><p>You must set the <code>resizeImage</code> property along with either of <code>maxImageWidth</code> or <code>maxImageHeight</code>.</p></li>
+    </ul>
+</div>
+
+<div id="auto_replace" class="container mb-5">
+    <h1>Auto Replace Files </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Auto_Replace","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>A demonstration for auto replacing files in the preview when it exceeds the <a href="http://plugins.krajee.com/file-input#option-maxfilecount">maxFileCount</a> setting. For this to work, you must set the <a href="http://plugins.krajee.com/file-input#option-maxfilecount">autoReplace</a> property to <code>true</code> with a proper  <a href="http://plugins.krajee.com/file-input#option-maxfilecount">maxFileCount</a> setting. For restricting to single (ONE) file uploads, in addition to setting <a href="http://plugins.krajee.com/file-input#option-maxfilecount">maxFileCount</a> to <code>1</code>, do NOT SET the <code>multiple</code> attribute of the file input (to prevent multiple selections).</p>
+</div>
+
+<div id="file_count_validation" class="container mb-5">
+    <h1>  File Count Validation </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("File_Count_Validation","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Advanced file count validation for <a href="http://plugins.krajee.com/file-input#option-minfilecount">minFileCount</a> and <a href="http://plugins.krajee.com/file-input#option-maxfilecount">maxFileCount</a>. You can choose to include initial preview file count in these checks by setting <a href="http://plugins.krajee.com/file-input#option-validateinitialcount">validateInitialCount</a> property to <code>true</code>. This can be validated for both ajax uploads (with <a href="http://plugins.krajee.com/file-input#option-uploadurl">uploadUrl</a>) and non-ajax uploads (without <code>uploadUrl</code>).</p>
+</div>
+
+<div id="plugin_methods" class="container mb-5">
+    <h1>Plugin Methods </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Plugin_Methods","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Demonstration on usage of various plugin methods to manipulate the fileinput plugin. This example also shows usage of a few plugin events before and after a REFRESH method. TIP: To test destruction and recreation - try using the Browse button to select a file. Then click DESTROY. You will see the destroyed plugin and a native fileinput which will still have the file(s) selected. Clicking RECREATE will revive back the plugin along with the file(s) selected.</p>
+</div>
+
+<div id="ajax" class="container mb-5">
+    <h1> Ajax Uploads  </h1>
+    <hr />
+    <a class="btn btn-success" href=@Url.Action("Ajax","FileInput")><i class="fas fa-hand-point-right"></i> Click for Demo</a>
+    <hr />
+    <p>Advanced upload ability with various configurable functionality are possible through ajax uploads. You need to read and setup the <a href="http://plugins.krajee.com/file-input#ajax-uploads">ajax server methods</a> to correctly parse and return the right response via AJAX.
+        <div class="bs-callout bs-callout-info">
+        <h4>Note</h4>
+        You can <a href="//webtips.krajee.com/ajax-based-file-uploads-using-fileinput-plugin/">refer this webtip</a>
+        for an example of processing ajax based uploads using PHP.
+         </div>
+    </p>
+</div>
+

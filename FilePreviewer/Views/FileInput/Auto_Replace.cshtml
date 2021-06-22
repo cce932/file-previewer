@@ -1,1 +1,27 @@
-﻿
+﻿<div id="one-file-limit" class="container mb-5">
+    <h1>One File Limit</h1>
+    <hr />
+    <p>Set <code>maxFileCount</code> to <code>1</code> and DO NOT set the <code>multiple</code> attribute on your file input markup to allow ONLY ONE file to be selected OR uploaded at a time.</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-repl-1" name="file" type="file">
+    </form>
+</div>
+
+<div id="one-file-limit-alternate" class="container mb-5">
+    <h1>One File Limit (Alternate)</h1>
+    <hr />
+    <p>An alternative to the one file limit above, which includes an initial preview. This scenario consists a configuration that will automatically overwrite initial preview files and overwrite uploaded thumbnails to always show one file in the preview. <b class="badge bg-info">Note</b>: Initial preview thumbnail deletion capability has been disabled for this demo.</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-repl-1a" name="file" type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="multiple-file-input" class="container mb-5">
+    <h1> Multiple File Limit </h1>
+    <hr />
+    <p>You can also validate multiple file uploads and auto-replace the files in preview after the <code>maxFileCount</code> has been reached.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-repl-2" name="files" type="file" accept="image/*" multiple>
+    </form>
+</div>
+

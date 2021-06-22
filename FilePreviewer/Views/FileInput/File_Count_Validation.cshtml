@@ -1,1 +1,110 @@
-﻿
+﻿<div id="max-files-ajax" class="container mb-5">
+    <h1>Max Files (Ajax)</h1>
+    <hr />
+    <p>Set <code>maxFileCount</code> with <code>validateInitialCount</code> property set to <code>true</code>, to include initialPreview files from server in the file count validation. Note <code>overwriteInitial</code> property must be set to <code>false</code> for initial count validation to be effective.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fcount-1" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="min-files-ajax" class="container mb-5">
+    <h1>Min Files (Ajax) </h1>
+    <hr />
+    <p>Similar validation for <code>minFileCount</code>. Try deleting a file from initial preview to test a <code>minFileCount</code> of <code>2</code>. You need to also set <code>validateInitialCount</code> properties to <code>true</code>, to validate count of initialPreview files from server in the file count validation. Note <code>overwriteInitial</code> property must be set to <code>false</code> for initial count validation to be effective.</p>
+    <div class="bs-callout bs-callout-warning" style="border: 1px solid black;">
+        <h4>Note</h4>
+        The <code>minFileCount</code> check cannot be comprehensive and complete by client validation alone. The client validation routine for <code>minFileCount</code> is triggered only at file upload and file delete. So an user can technically skip upload after deletion and <code>minFileCount</code> check can be compromised. You need to hence write your server code appropriately to ensure validation of <code>minFileCount</code> for uploaded files. You would need to ensure the files on server not deleted until <code>minFileCount</code> is adhered to.
+    </div>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fcount-2" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="max-files-non-ajax" class="container mb-5">
+    <h1> Max Files (Non-Ajax)  </h1>
+    <hr />
+    <p>A <code>maxFileCount</code> validation but for non-ajax (form based) upload scenario.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fcount-3" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="min-files-non-ajax" class="container mb-5">
+    <h1> Min Files (Non-Ajax)  </h1>
+    <hr />
+    <p>A <code>minFileCount</code> validation but for non-ajax (form based) upload scenario.</p>
+    <div class="bs-callout bs-callout-warning" style="border: 1px solid black;">
+        <h4>Note</h4>
+        The <code>minFileCount</code> check cannot be comprehensive and complete by client validation alone. The client validation routine for <code>minFileCount</code> is triggered only at file upload and file delete. So an user can technically skip upload after deletion and <code>minFileCount</code> check can be compromised. You need to hence write your server code appropriately to ensure validation of <code>minFileCount</code> for uploaded files. You would need to ensure the files on server not deleted until <code>minFileCount</code> is adhered to.
+    </div>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-fcount-4" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="max-files-special" class="container mb-5">
+    <h1> Max Files (Special)   </h1>
+    <hr />
+    <p>Maximum file count special validation, which includes setting up of both <samp><a href="/file-input/plugin-options#maxFileCount">maxFileCount</a></samp> and <samp><a href="/file-input/plugin-options#maxTotalFileCount">maxTotalFileCount</a></samp> properties. This example will allow only 3 files to be selected for upload initially at a time via <samp><a href="/file-input/plugin-options#maxFileCount">maxFileCount</a></samp> and not more than 8 files (<samp><a href="/file-input/plugin-options#maxTotalFileCount">maxTotalFileCount</a></samp>) in total including the initial preview files. Try uploading 4 files first which will give an error. Next, try uploading 3 files first which will get you 6 files in initialPreview and then try uploading another 3 files to get a disallowed error, as the total file count (9) and will exceed 8 as set in <samp><a href="/file-input/plugin-options#maxTotalFileCount">maxTotalFileCount</a></samp>.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="kartik-input-705" name="files" multiple type="file">
+    </form>
+</div>
+
+<div id="required-1-ajax" class="container mb-5">
+    <h1>Required Validation 1 (Ajax)</h1>
+    <hr />
+    <p>Validation of <a href="http://plugins.krajee.com/file-input#option-required">required</a> property for ajax upload scenario, which will enforce files to be selected and required before upload. This scenario includes a custom upload button and a custom reset button (and default upload and remove buttons are hidden). The upload will force a file to be selected and required - else a validation error as set in <a href="http://plugins.krajee.com/file-input#option-msgrequired">msgRequired</a> will be shown.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-freqd-1" name="files" multiple type="file" accept="image/*">
+    </form>
+    <hr />
+    <div class="text-center">
+        <button type="button" class="btn btn-lg btn-success btn-upload-3"><i class="fa fa-upload"></i> Upload</button>
+        <button type="button" class="btn btn-lg btn-secondary btn-reset-3"><i class="fa fa-ban"></i> Clear</button>
+    </div>
+</div>
+
+<div id="required-2-ajax" class="container mb-5">
+    <h1>Required Validation 2 (Ajax)</h1>
+    <hr />
+    <p>Validation of same scenario above for <a href="http://plugins.krajee.com/file-input#option-required">required</a> property for ajax upload scenario, but additionally includes initial preview count in the required validation. The <a href="http://plugins.krajee.com/file-input#option-validateinitialcount">validateInitialCount</a> property is set to <code>true</code> to include initial count in validating if files are selected. This scenario again includes a custom upload button and a custom reset button (and default upload and remove buttons are hidden). The upload will force a file to be selected and required - else a validation error as set in <a href="http://plugins.krajee.com/file-input#option-msgrequired">msgRequired</a> will be shown.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-freqd-2" name="files" multiple type="file" accept="image/*">
+    </form>
+    <hr />
+    <div class="text-center">
+        <button type="button" class="btn btn-lg btn-success btn-upload-4"><i class="fa fa-upload"></i> Upload</button>
+        <button type="button" class="btn btn-lg btn-secondary btn-reset-4"><i class="fa fa-ban"></i> Clear</button>
+    </div>
+</div>
+
+<div id="required-1-non-ajax" class="container mb-5">
+    <h1>Required Validation 1 (Non Ajax)</h1>
+    <hr />
+    <p>Validation of <a href="http://plugins.krajee.com/file-input#option-required">required</a> property for form based upload (non ajax) scenario, which will enforce files to be selected and required before upload. This scenario includes custom form submit and reset buttons for upload (and default upload and remove buttons are hidden). The upload will force a file to be selected and required - else a validation error as set in <a href="http://plugins.krajee.com/file-input#option-msgrequired">msgRequired</a> will be shown.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-freqd-3" name="files" multiple type="file" accept="image/*">
+    </form>
+    <hr />
+    <div class="text-center">
+        <button type="submit" class="btn btn-lg btn-success btn-submit"><i class="fa fa-upload"></i> Submit</button>
+        <button type="reset" class="btn btn-lg btn-secondary btn-reset"><i class="fa fa-refresh"></i> Reset</button>
+    </div>
+</div>
+
+<div id="required-2-non-ajax" class="container mb-5">
+    <h1>Required Validation 2 (Non Ajax) </h1>
+    <hr />
+    <p>Validation of same scenario above for <a href="http://plugins.krajee.com/file-input#option-required">required</a> property for form based upload (non ajax) scenario, but additionally includes initial preview count in the required validation. The <a href="http://plugins.krajee.com/file-input#option-validateinitialcount">validateInitialCount</a> property is set to <code>true</code> to include initial count in validating if files are selected. This scenario again includes custom form submit and reset buttons for upload (and default upload and remove buttons are hidden). The upload will force a file to be selected and required - else a validation error as set in <a href="http://plugins.krajee.com/file-input#option-msgrequired">msgRequired</a> will be shown.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data" class="krajee-example-form">
+        <div class="file-loading">
+            <input id="input-freqd-4" name="files" multiple type="file" accept="image/*">
+        </div>
+        <hr>
+        <div class="text-center">
+            <button type="submit" class="btn btn-lg btn-success btn-submit"><i class="fa fa-upload"></i> Submit</button>
+            <button type="reset" class="btn btn-lg btn-secondary btn-reset"><i class="fa fa-refresh"></i> Reset</button>
+        </div>
+    </form>
+</div>

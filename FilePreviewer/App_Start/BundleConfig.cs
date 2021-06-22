@@ -23,20 +23,42 @@ namespace FilePreviewer
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/demo").Include(
-                      "~/Scripts/demo.js"));
+                      "~/Scripts/demo.js"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/filePreviewer").Include(
                       "~/Scripts/filePreviewer.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap-fileinput").Include(
+                      "~/Scripts/plugins/sortable.min.js", //used in Preview_Management.cshtml
+                       "~/Scripts/plugins/piexif.js", //used in ImageManagement.cshtml
                       "~/Scripts/fileinput.js",
-                      "~/Scripts/locales/zh-TW.js"));
+                      "~/Scripts/locales/zh-TW.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundle/langJs").Include(
+                       "~/Scripts/locales/fr.js",
+                       "~/Scripts/locales/pt-BR.js",
+                       "~/Scripts/locales/ru.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundle/themeJs").Include(
+           "~/Scripts/themes/fa/theme.js",
+           "~/Scripts/themes/fas/theme.js",
+           "~/Scripts/themes/gly/theme.js",
+           "~/Scripts/themes/explorer-fas/theme.js"
+    ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/demo.css",
-                      "~/Content/bootstrap-fileinput/css/fileinput.css"
+                      "~/Content/bootstrap-fileinput/css/fileinput.css",
+                      "~/Content/bootstrap-fileinput/css/fileinput-rtl.css"
+                      ));
+
+            bundles.Add(new StyleBundle("~/Theme/css").Include(
+                       "~/Scripts/themes/explorer-fas/theme.css"
                       ));
         }
     }

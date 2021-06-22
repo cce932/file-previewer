@@ -1,1 +1,32 @@
-﻿
+﻿<div id="manipulation-methods" class="container mb-5">
+    <h1> Manipulation Method</h1>
+    <hr />
+    <p> Manipulate the file plugin using various built in methods.  </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="file-4" name="files" type="file" multiple>
+    </form>
+    <hr>
+    <button class="btn btn-secondary btn-disable" type="button">Disable</button>
+    <button class="btn btn-danger btn-destroy" type="button">Destroy</button>
+    <button class="btn btn-success btn-recreate" type="button">Recreate</button>
+    <button class="btn btn-info btn-refresh" type="button">Refresh</button>
+    <button class="btn btn-outline-secondary btn-clear" type="button">Clear</button>
+</div>
+
+<div id="delete-validation-1" class="container mb-5">
+    <h1>Delete Validation 1</h1>
+    <hr />
+    <p>Delete validation of inital preview file thumbnails. This example demonstrates how one can show a confirmation dialog before deleting using the <code>filebeforedelete</code> event. It also mentions an example of how you can use methods like <code>getFilesCount</code> to return the total files selected.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="file-5" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="delete-validation-2" class="container mb-5">
+    <h1>Delete Validation 2 </h1>
+    <hr />
+    <p>A more advanced variation of <a href="#delete-validation-1">delete validation 1 scenario</a> where a third party JS plugin like <a href="http://craftpip.github.io/jquery-confirm/" target="_blank">jquery-confirm</a> is used to render the confirmation prompt. In this case the <code>filebeforedelete</code> event must return a promise object as shown.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="file-6" name="files" type="file" multiple>
+    </form>
+</div>

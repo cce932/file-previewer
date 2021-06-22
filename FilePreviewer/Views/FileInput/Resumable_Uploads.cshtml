@@ -1,1 +1,31 @@
-﻿
+﻿<div id="resumable1" class="container mb-5">
+    <h1>Resumable Scenario # 1</h1>
+    <hr />
+    <p>This example shows a basic resumable upload setup to upload large sized files as smaller chunks. You can select multiple files in this example. You need to set <samp><a href="/file-input/plugin-options#enableResumableUpload">enableResumableUpload</a></samp> to <code>true</code> for enabling resumable uploads. The <samp><a href="/file-input/plugin-options#uploadUrl">uploadUrl</a></samp> will receive each file chunk for processing. The maximum file count that can be selected simultaneously for upload is set to <code>5</code>. The default chunk size settings are used (i.e. <code>2048 KB</code> or <code>2 MB</code> per chunk). The example also shows configuration of <code>showZoom</code> within <samp><a href="/file-input/plugin-options#fileActionSettings">fileActionSettings</a></samp> as a callback function (whereby the zoom button in the file thumbnails is displayed only for specific selected file types i.e. <code>pdf</code> and <code>image</code>).</p><p>Note that once you click upload, only the pause button is shown for pausing and resuming the upload from the last position. The cancel button is by default not displayed.</p><p>Refer the <a href="/file-input#ajax-resumable">resumable uploads section</a> for overview on setting up resumable / chunk uploads including a sample server code (PHP example) for processing the file chunks on the server.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-res-1">File Gallery</label>
+        <input id="input-res-1" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="resumable2" class="container mb-5">
+    <h1>Resumable Scenario # 2</h1>
+    <hr />
+    <p>A variation of scenario # 1, where the plugin includes an option to test the status of a partially uploaded earlier file and resume upload from the previously uploaded point. To test this example, first <a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleJPGImage30MB.jpg">download this 30MB sample image file</a> to your client and try to upload (without changing the file name). The <code>testUrl</code> within <samp><a href="/file-input/plugin-options#resumableUploadOptions">resumableUploadOptions</a></samp> will validate the <code>chunksUploaded</code> as an array list of 14 chunk indices already uploaded. The upload will recalibrate and resume from <code>~52%</code> progress onwards. For this example, the <code>chunkSize</code> is set to <code>1024 KB</code> (i.e. <code>1 MB</code>) within <samp><a href="/file-input/plugin-options#resumableUploadOptions">resumableUploadOptions</a></samp>. The example also enables the cancel button for cancelling/aborting uploads by setting <samp><a href="/file-input/plugin-options#showCancel">showCancel</a></samp> to explicitly true. Note that only image files are allowed for this example by setting <samp><a href="/file-input/plugin-options#allowedFileTypes">allowedFileTypes</a></samp> and the <code>accept</code> attribute within the native file input markup. Note also that you may not be able to preview the content of the 30 MB image file for this example, as it is controlled by the <samp><a href="/file-input/plugin-options#maxFilePreviewSize">maxFilePreviewSize</a></samp> (which defaults to <code>25600 KB</code> i.e. <code>25 MB</code>).</p>
+    <p>Refer the <a href="/file-input#ajax-resumable">resumable uploads section</a> for overview on setting up resumable / chunk uploads including a sample server code (PHP example) for processing the file chunks on the server.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-res-2">File Gallery</label>
+        <input id="input-res-2" name="files" type="file" multiple accept="image/*">
+    </form>
+</div>
+
+<div id="resumable3" class="container mb-5">
+    <h1>Resumable Scenario # 3</h1>
+    <hr />
+    <p>A variation of scenario 1 to show few other ways to configure the plugin for resumable uploads. You can set <samp><a href="/file-input/plugin-options#uploadExtraData">uploadExtraData</a></samp>  to send and receive additional data and information. For example, this scenario sends an <code>uploadToken</code> via <samp><a href="/file-input/plugin-options#uploadExtraData">uploadExtraData</a></samp> to validate the rights/accesses for the upload. This example shows how to use the plugin resumable events like <samp><a href="/file-input/plugin-events#fileuploaded">fileuploaded</a></samp>, <samp><a href="/file-input/plugin-events#fileuploaderror">fileuploaderror</a></samp>, and <samp><a href="/file-input/plugin-events#filebatchuploadcomplete">filebatchuploadcomplete</a></samp>. Check the browser console for data received via these events. This example also shows how you can have an <samp><a href="/file-input/plugin-options#initialPreview">initialPreview</a></samp> and <samp><a href="/file-input/plugin-options#initialPreviewConfig">initialPreviewConfig</a></samp> configured for displaying initially uploaded files. It also uses an icon only preview for this example via the <samp><a href="/file-input/plugin-options#preferIconicPreview">preferIconicPreview</a></samp>, <samp><a href="/file-input/plugin-options#previewFileIconSettings">previewFileIconSettings</a></samp>, and <samp><a href="/file-input/plugin-options#previewFileExtSettings">previewFileExtSettings</a></samp> settings.</p>
+    <p>Refer the <a href="/file-input#ajax-resumable">resumable uploads section</a> for overview on setting up resumable / chunk uploads including a sample server code (PHP example) for processing the file chunks on the server.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-res-3">File Gallery</label>
+        <input id="input-res-3" name="files" type="file" multiple>
+    </form>
+</div>

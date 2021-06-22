@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 
 
 
@@ -122,7 +123,7 @@ namespace FilePreviewer.Controllers
             ViewBag.SidebarItems = new Dictionary<string, string>()
             {
                 {"initial-preview-data", "Initial Preview Data" },
-                {"inital-preview-raw", "Initial Preview Raw" },
+                {"initial-preview-raw", "Initial Preview Raw" },
                 {"initial-preview-advanced", "Initial Preivew Advanced" },
                 {"initial-preview-iconic", "Initial Preivew Iconic" },
                 {"reverse-preview-order", "Reverse Preview Order" },
@@ -199,7 +200,7 @@ namespace FilePreviewer.Controllers
         public ActionResult Ajax()
         {
             ViewBag.SidebarItems = new Dictionary<string, string>();
-            string ActionName = "Ajax";
+            string ActionName = "ajax";
             string ActionDescription = "Ajax Senerio";
             int length = 12;
             for (int i = 1; i <= length; i++)
@@ -207,6 +208,37 @@ namespace FilePreviewer.Controllers
                 ViewBag.SidebarItems.Add(ActionName + i.ToString(), ActionDescription+" " + i.ToString());
             }
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult MultipleUpload(HttpPostedFileBase[] files)
+        {
+            if (files.Count() > 0)
+            {
+                foreach(var file in files)
+                {
+                    if (file.ContentLength > 0)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        var path = Path.Combine(Server.MapPath("~/FileUploads"), fileName);
+                        file.SaveAs(path);
+                    }
+                }
+            }
+            return Redirect(Request.UrlReferrer.ToString());
+        }
+
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            if (file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/FileUploads"), fileName);
+                file.SaveAs(path);
+            }
+
+            return Redirect(Request.UrlReferrer.ToString());
         }
     }
 }

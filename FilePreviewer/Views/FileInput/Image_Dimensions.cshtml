@@ -1,1 +1,17 @@
-﻿
+﻿<div id="minimum-image-dimensions" class="container mb-5">
+    <h1>Minimum Image Dimensions</h1>
+    <hr />
+    <p>Set <code>minImageWidth</code> and <code>minImageHeight</code>. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-dim-1" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="maximum-image-dimensions" class="container mb-5">
+    <h1>Maximum Image Dimension</h1>
+    <hr />
+    <p>Set <code>maxImageWidth</code> and <code>maxImageHeight</code>. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-dim-2" name="files" multiple type="file" accept="image/*">
+    </form>
+</div>

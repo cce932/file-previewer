@@ -1,1 +1,81 @@
-﻿
+﻿<!-- some CSS styling changes and overrides -->
+<style>
+    .kv-avatar .krajee-default.file-preview-frame, .kv-avatar .krajee-default.file-preview-frame:hover {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .kv-avatar {
+        display: inline-block;
+    }
+
+        .kv-avatar .file-input {
+            display: table-cell;
+            width: 213px;
+        }
+
+    .kv-reqd {
+        color: red;
+        font-family: monospace;
+        font-weight: normal;
+    }
+</style>
+<div id="avatar-upload" class="container mb-5">
+    <h1>Avatar Upload Example 1 </h1>
+    <hr />
+    <p>Example of viewing and managing an user profile picture in forms. The demo example includes other form inputs along with the file input for capturing picture and a form submit button to test the form submission. However note that the submission of form data to the server has not been enabled for this demo.  </p>
+    <form class="form form-vertical" action=@Url.Action("MultipleUploads") method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="kv-avatar">
+                    <div class="file-loading">
+                        <input id="avatar-1" name="files" type="file" required>
+                    </div>
+                </div>
+                <div class="kv-avatar-hint">
+                    <small>Select file < 1500 KB</small>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">Email Address<span class="kv-reqd">*</span></label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="pwd">Password<span class="kv-reqd">*</span></label>
+                            <input type="password" class="form-control" name="pwd" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" name="fname" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" name="lname" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <hr>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div id="kv-avatar-errors-1" class="text-center" style="display:none"></div>
+</div>

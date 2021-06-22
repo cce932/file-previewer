@@ -1,9 +1,152 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Ajax";
 }
-            <div>
-                123456  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </div>
+
+<div id="ajax1" class="container mb-5">
+    <h1>1: Asynchronous / Parallel Uploads</h1>
+    <hr />
+    <p class="lead">
+        <b>Asynchronous / Parallel</b> AJAX based uploads with drag and drop functionality. Just set the <code>uploadUrl</code> data property and <code>multiple</code> to true. Note that the file input name attribute for multiple uploads should be setup as a array format. You can modify files selected before upload i.e. append or delete. For this example below, you can read the uploaded files on your server for the input name <code>kartik-input-700</code>.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-700" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax2" class="container mb-5">
+    <h1>2: Synchronous / Sequential Uploads</h1>
+    <hr />
+    <p class="lead">
+        <b>Synchronous / Sequential</b> AJAX based uploads (only one server ajax method called) with drag and drop functionality. Very similar to <a href="/file-input-ajax-demo/1">scenario 1</a>, - however you set the <code>uploadAsync</code> property to <code>false</code> in this case. For this example below, you can read the uploaded files on your server for the input name <code>kartik-input-701</code>.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-701" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax3" class="container mb-5">
+    <h1>3: Initial Preview Configuration</h1>
+    <hr />
+    <p class="lead">
+        <b>Initial Preview Configuration</b> for AJAX based uploads along with initial preview delete button and methods. The <code>overwriteInitial</code> property is set to <code>false</code>. Note that you can set <code>initialPreviewAsData</code> property set to <code>true</code>, to pass only the data part of initial preview. This property will identify that you are sending preview as data only and not the entire raw markup. This scenario also shows additional extra data you can send with the file uploaded to the server by configuring <code>uploadExtraData</code>. This scenario also shows how you can setup minimum file count (<code>2</code> for this case) to make your file input mandatory to have the minimum number of files.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-702" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax4" class="container mb-5">
+    <h1>4: Advanced Dynamic Preview (Async Batch)</h1>
+    <hr />
+    <p class="lead">
+        Extension of <a href="/file-input-ajax-demo/1">scenario 1</a> for asynchronous uploads - in which you can dynamically setup the <code>initialPreview</code> and <code>initialPreviewConfig</code> immediately after upload at runtime. For this you must return the <code>initialPreview</code>, <code>initialPreviewConfig</code>, and <code>append</code> properties within a JSON object from your server. <span class="badge bg-success">TIP</span>: Try uploading each file through upload icon in the thumbnail and you can see each thumbnail getting replaced by the server generated file link. Refer to the documentation for <a href="/file-input#async-receive">receiving data</a> on server or <a href="/file-input#async-send">sending data</a> from server in asynchronous mode.
+    </p>
+    <div class="bs-callout bs-callout-info">
+        <h4>Note</h4> For these demo scenarios, the server code actually does not store / upload the files on the server and returns a dummy set of images for testing.
+    </div>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-703" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax5" class="container mb-5">
+    <h1>5: Advanced Dynamic Preview (Sync Batch)</h1>
+    <hr />
+    <p class="lead">
+        Extension of <a href="/file-input-ajax-demo/2">scenario 2</a> for synchronous batch uploads - in which you can dynamically setup the <code>initialPreview</code> and <code>initialPreviewConfig</code> immediately after upload at runtime. For this you must return the <code>initialPreview</code>, <code>initialPreviewConfig</code>, and <code>append</code> properties within a JSON object from your server. Refer to the documentation for <a href="/file-input#sync-receive">receiving data</a> on server or <a href="/file-input#sync-send">sending data</a> from server in synchronous mode.
+    </p>
+    <p class="lead">The example below contains an example of a PHP server code that can respond with such a JSON as mentioned above.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-704" name="files" type="file" accept="image/*" multiple>
+    </form>
+</div>
+
+<div id="ajax6" class="container mb-5">
+    <h1>6: Auto Upload On File Drag-Drop</h1>
+    <hr />
+    <p class="lead">
+        Extension of <a href="/file-input-ajax-demo/5">scenario 5</a> to trigger auto upload immediately after files are dragged &amp; dropped (OR when files are selected via browse button). Note that the <code>filebatchselected</code> event is used to trigger the auto upload. We will HIDE the <b>upload</b> button for this scenario and set the <samp><a href="/file-input/plugin-options#browseOnZoneClick">browseOnZoneClick</a></samp> property to <code>true</code>. Like scenario 5, this incorporates synchronous batch uploads in which you can dynamically setup the <code>initialPreview</code> and <code>initialPreviewConfig</code> immediately after upload at runtime. For this you must return the <code>initialPreview</code>, <code>initialPreviewConfig</code>, and <code>append</code> properties within a JSON object from your server. Refer to the documentation for <a href="#sync-receive">receiving data</a> on server or <a href="#sync-send">sending data</a> from server in synchronous mode.
+    </p>
+    <p class="lead">The example below contains an example of a PHP server code that can respond with such a JSON as mentioned above.</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-705" name="files" type="file" accept="image/*" multiple>
+    </form>
+</div>
+
+<div id="ajax7" class="container mb-5">
+    <h1>7: Advanced Templates & Extra Data</h1>
+    <hr />
+    <p class="lead">
+        Extension of <a href="/file-input-ajax-demo/3">scenario 3</a> to include your own custom thumbnail templates for capturing additional data in each preview thumbnail. This will include an example of setting the <code>layoutTemplates.footer</code> property. The <code>previewThumbTags</code> will be used to replace the tags in the template dynamically at runtime. After upload, the data returned by <code>initialPreview</code> will be replaced by tags from <code>initialPreviewThumbTags</code>. These tags will be an array of tag objects that will be replaced in the thumbnail footer template for each thumbnail in the initial preview.
+    </p>
+    <div class="bs-callout bs-callout-info">
+        <h4>Note</h4> For these demo scenarios, the server code actually does not store / upload the files on the server and returns a dummy set of images for testing.
+    </div>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-706" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax8" class="container mb-5">
+    <h1>8: Advanced Pre Delete Validation</h1>
+    <hr />
+    <p class="lead">
+        Validations before deleting files. Use <code>filepredelete</code> event to do your validations and return an abort status as mentioned in the
+        <a href="/file-input#event-manipulation">event manipulation documentation</a>. For example raise a confirmation dialog for delete. Return <code>true</code> (or any valid value/object other than <code>false</code> or <code>null</code> or empty string) if you wish to abort the delete process. You can do further operations if you want on this by trapping the <code>filecustomerror</code> event. Your <code>filecustomerror</code> event, can receive data that you return from these other events.
+    </p>
+    <div class="bs-callout bs-callout-info">
+        <h4>Note</h4> For these demo scenarios, the server code actually does not store / upload the files on the server and returns a dummy set of images for testing.
+    </div>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-707" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax9" class="container mb-5">
+    <h1>9: Advanced Pre Upload Validation</h1>
+    <hr />
+    <p class="lead">
+        You can carry out validations OR get confirmations from user before upload. This example uses the
+        <a href="/file-input#event-filebatchpreupload">filebatchpreupload</a> event to trigger a confirmation dialog. It then uses the <a href="/file-input#event-manipulation">event manipulation documentation</a> feature of the plugin to trigger an abort message based on confirmation dialog. You can read in additional data through the events as shown in the example below. For this example, the user is alerted to confirm if the number of files for upload is OK and proceed else an upload abort message is shown.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-708" name="files" type="file" multiple>
+    </form>
+</div>
+
+<div id="ajax10" class="container mb-5">
+    <h1>10: Asynchronous Without Preview</h1>
+    <hr />
+    <p class="lead">
+        <b>Asynchronous AJAX based uploads</b> without preview and ability to trigger <code>fileuploaded</code> event for each file. You would set <code>showPreview</code> to <code>false</code> to disable preview. The progress bar for uploads will by default be shown automatically. To allow trapping and display errors when not having a preview pane, set a custom error container via <code>elErrorContainer</code>. Note that it is recommended to set a <code>display:none</code> style for the error container to have a consistent layout display even when no validation errors exist.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-709" name="kartik-input-709[]" type="file" multiple>
+    </form>
+    <div id="kv-error-1" style="margin-top:10px;display:none"></div>
+    <div id="kv-success-1" class="alert alert-success" style="margin-top:10px;display:none"></div>
+</div>
+
+<div id="ajax11" class="container mb-5">
+    <h1>11: Synchronous Without Preview</h1>
+    <hr />
+    <p class="lead">
+        <b>Synchronous Without Preview</b>: This scenario extends <a href="/file-input-ajax-demo/10">scenario 10</a> for synchronous AJAX based uploads without preview. The events to use are a bit different here (e.g. <code>filebatchuploadsuccess</code> instead of <code>fileuploaded</code>). You would set <code>showPreview</code> to <code>false</code> to disable preview. The progress bar for uploads will by default be shown automatically. To allow trapping and display errors when not having a preview pane, set a custom error container via <code>elErrorContainer</code>. Note that it is recommended to set a <code>display:none</code> style for the error container to have a consistent layout display even when no validation errors exist.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-710" name="files]" type="file" multiple>
+    </form>
+    <div id="kv-error-2" style="margin-top:10px;display:none"></div>
+    <div id="kv-success-2" class="alert alert-success" style="margin-top:10px;display:none"></div>
+</div>
+
+<div id="ajax12" class="container mb-5">
+    <h1>12: Clickable File Select Zone</h1>
+    <hr />
+    <p class="lead">
+        Extension of <a href="/file-input-ajax-demo/1">scenario 1</a> to add ability for CLICK TO SELECT in the zone to browse and select files. The scenario also hides the browse button for making it clear to the user to select files on drop zone click. Note the properties <code>showBrowse</code> and <code>browseOnZoneClick</code> that are used to control this. In addition, the drag and drop zone will append to <code>dropZoneTitle</code> the message text as defined in <code>dropZoneClickTitle</code>. For an example of CLICK TO SELECT for non-ajax (form based) uploads, view the <a href="/file-avatar-upload-demo#avatar-upload-2">avatar upload example # 2</a>.
+    </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-711" name="files" type="file" multiple>
+    </form>
+</div>

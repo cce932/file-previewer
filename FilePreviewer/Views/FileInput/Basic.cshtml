@@ -1,1 +1,78 @@
 ﻿
+<div id="basic1" class="container mb-5">
+    <h1>Basic Example 1</h1>
+    <hr />
+    <p>基本外觀</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input name="file" type="file" class="file" data-browse-on-zone-click="true">
+    </form>
+</div>
+
+<div id="basic2" class="container mb-5">
+    <h1>Basic Example 2</h1>
+    <hr />
+    <p>取消檔案縮圖</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input name="file" type="file" class="file" data-show-preview="false">
+    </form>
+</div>
+
+<div id="basic3" class="container mb-5">
+    <h1>Basic Example 3</h1>
+    <hr />
+    <p>多檔案傳輸</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input name="files" type="file" class="file" multiple data-show-caption="true" data-msg-placeholder="Select {files} for upload...">
+    </form>
+</div>
+
+<div id="basic4" class="container mb-5">
+    <h1>Basic Example 4</h1>
+    <hr />
+    <p>readonly 或 disabled</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <label for="file">Readonly Input</label>
+        <input name="file" type="file" class="file" readonly="true">
+    </form>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <label for="file">Disabled Input</label>
+        <input name="file" type="file" class="file" disabled="true">
+    </form>
+</div>
+
+<div id="basic5" class="container mb-5">
+    <h1>Basic Example 5</h1>
+    <hr />
+    <p>隱藏檔案托放區</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label class="control-label">Select File</label>
+        <input id="input-b5" name="files" type="file" class="file" multiple>
+    </form>
+</div>
+
+<div id="basic6" class="container mb-5">
+    <h1>Basic Example 6</h1>
+    <hr />
+    <p>調整框框大小，設定最大上傳數為10</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-b6" name="files" type="file" class="file" multiple>
+    </form>
+</div>
+
+<div id="basic7" class="container mb-5">
+    <h1>Basic Example 7</h1>
+    <hr />
+    <p>限制檔案類型 .csv 或 .txt</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-b7" name="files" multiple type="file" class="file" data-allowed-file-extensions='["csv", "txt"]'>
+    </form>
+</div>
+
+<div id="basic8" class="container mb-5">
+    <h1>Basic Example 8</h1>
+    <hr />
+    <p>方向從右到左</p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-b8" name="files" multiple type="file">
+    </form>
+</div>

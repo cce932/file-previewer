@@ -57,6 +57,11 @@
     color: rgba(211, 158, 0, 0.6);
     background-color: rgba(26, 26, 26, 0.6);
 }
+.list-item.active a {
+    border-left: 4px solid #ffc107;
+    color: #d39e00;
+    background-color: #1a1a1a;
+}
 .list-item.active-always a {
     border-left: 4px solid #ffc107;
     color: #d39e00;
@@ -65,13 +70,8 @@
 .sub-icon {
     font-size: 18px;
 }
-/*.fa-play-circle::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f144";
-}*/
 
 .content {
-    background-color: #808080;
     padding-left: 275px;
     transition: .15s padding-left;
 }
@@ -87,4 +87,8 @@
     .content {
         padding-left: 0px;
     }
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
 }

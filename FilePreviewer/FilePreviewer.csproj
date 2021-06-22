@@ -273,6 +273,26 @@
     <Content Include="Scripts\plugins\piexif.min.js" />
     <Content Include="Scripts\plugins\sortable.js" />
     <Content Include="Scripts\plugins\sortable.min.js" />
+    <Content Include="Scripts\themes\bs5\theme.js" />
+    <Content Include="Scripts\themes\bs5\theme.min.js" />
+    <Content Include="Scripts\themes\explorer-fas\theme.css" />
+    <Content Include="Scripts\themes\explorer-fas\theme.js" />
+    <Content Include="Scripts\themes\explorer-fas\theme.min.css" />
+    <Content Include="Scripts\themes\explorer-fas\theme.min.js" />
+    <Content Include="Scripts\themes\explorer-fa\theme.css" />
+    <Content Include="Scripts\themes\explorer-fa\theme.js" />
+    <Content Include="Scripts\themes\explorer-fa\theme.min.css" />
+    <Content Include="Scripts\themes\explorer-fa\theme.min.js" />
+    <Content Include="Scripts\themes\explorer\theme.css" />
+    <Content Include="Scripts\themes\explorer\theme.js" />
+    <Content Include="Scripts\themes\explorer\theme.min.css" />
+    <Content Include="Scripts\themes\explorer\theme.min.js" />
+    <Content Include="Scripts\themes\fas\theme.js" />
+    <Content Include="Scripts\themes\fas\theme.min.js" />
+    <Content Include="Scripts\themes\fa\theme.js" />
+    <Content Include="Scripts\themes\fa\theme.min.js" />
+    <Content Include="Scripts\themes\gly\theme.js" />
+    <Content Include="Scripts\themes\gly\theme.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

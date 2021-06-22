@@ -1,1 +1,30 @@
-﻿
+﻿<div id="single-file-upload" class="container mb-5">
+    <h1>Single File Upload</h1>
+    <hr />
+    <p>An example where you wish to upload A SINGLE FILE only from the selected folder. </p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <label for="input-folder-1">Upload File From Folder</label>
+        <input id="input-folder-1" name="file" type="file" webkitdirectory>
+    </form>
+</div>
+
+<div id="multi-file-upload" class="container mb-5">
+    <h1>Multi File Upload </h1>
+    <hr />
+    <p>Multiple files upload. All files in the selected folders will be recursively selected for upload. Note that you may need to control the preview of allowed files for folder uploads. Else, reading and displaying large number of files in a folder for preview can use up your browser memory and impact performance. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-folder-2">Upload All Files From Folder</label>
+        <input id="input-folder-2" name="files" type="file" multiple webkitdirectory accept="image/*">
+    </form>
+</div>
+
+<div id="drag-and-drop-folders" class="container mb-5">
+    <h1>Drag & Drop Folders</h1>
+    <hr />
+    <p>An example of dragging and dropping folders (supported only on webkit browsers like Chrome). This is applicable only for ajax uploads. You can select a combination of files and folders and the plugin will automatically deep scan nested folders to read all files across folders. This example hides thumbnail content for preview for better performance with larger number of files. </p>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <label for="input-folder-3">Select files/folders</label>
+        <input id="input-folder-3" name="files" type="file" multiple>
+    </form>
+</div>
+

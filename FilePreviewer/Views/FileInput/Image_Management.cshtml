@@ -1,1 +1,69 @@
-﻿
+﻿<div id="auto-image-orientation" class="container mb-5">
+    <h1>Auto Image Orientation</h1>
+    <hr />
+    <p>With release v4.4.0, images can be auto-oriented for display before upload, based on EXIF orientation tag. This is achieved through the  property <samp><a href="http://plugins.krajee.com/file-input/plugin-options#autoOrientImage">autoOrientImage</a></samp>, which will automatically rotate or flip the images for preview (note that this does not alter the source image file sent to server, but only alters the style for right display).</p>
+    <p>Note that for auto image orientation, browsers which support the <a href="https://caniuse.com/#feat=css-image-orientation" target="_blank">image-orientation</a> CSS will be auto detected by the plugin and this browser capability will be turned on or off. For browsers which do not support the <code>image-orientation</code> CSS property, you must load the <a href="https://github.com/hMatoba/piexifjs" target="_blank">Piexifjs plugin by hMatoba</a> before the <code>fileinput.js</code> script.</p>
+    <p>For the demo example below, you can test the auto EXIF rotation by using one of the <code>Exif</code> sample image files from <a href="https://github.com/kartik-v/bootstrap-fileinput-samples/tree/master/samples">bootstrap-fileinput-samples</a>. Also you can test this demo by changing <code>autoOrientImage</code> on the fly by toggling the <b>Toggle Auto Orientation</b> checkbox. Note that only jpeg files will be detected for auto orientation.</p>
+    <h4>Example Test Images | <small>(download on your client and select for upload)</small></h4>
+    <table class="table table-bordered table-condensed"><tbody><tr><th>Landscape</th><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-1.jpg" alt="Exif-Landscape-1.jpg" title="Exif-Landscape-1.jpg" target="_blank">L-1</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-2.jpg" alt="Exif-Landscape-2.jpg" title="Exif-Landscape-2.jpg" target="_blank">L-2</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-3.jpg" alt="Exif-Landscape-3.jpg" title="Exif-Landscape-3.jpg" target="_blank">L-3</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-4.jpg" alt="Exif-Landscape-4.jpg" title="Exif-Landscape-4.jpg" target="_blank">L-4</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-5.jpg" alt="Exif-Landscape-5.jpg" title="Exif-Landscape-5.jpg" target="_blank">L-5</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-6.jpg" alt="Exif-Landscape-6.jpg" title="Exif-Landscape-6.jpg" target="_blank">L-6</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-7.jpg" alt="Exif-Landscape-7.jpg" title="Exif-Landscape-7.jpg" target="_blank">L-7</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Landscape-8.jpg" alt="Exif-Landscape-8.jpg" title="Exif-Landscape-8.jpg" target="_blank">L-8</a></td></tr><tr><th>Portrait</th><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-1.jpg" alt="Exif-Portrait-1.jpg" title="Exif-Portrait-1.jpg" target="_blank">P-1</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-2.jpg" alt="Exif-Portrait-2.jpg" title="Exif-Portrait-2.jpg" target="_blank">P-2</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-3.jpg" alt="Exif-Portrait-3.jpg" title="Exif-Portrait-3.jpg" target="_blank">P-3</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-4.jpg" alt="Exif-Portrait-4.jpg" title="Exif-Portrait-4.jpg" target="_blank">P-4</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-5.jpg" alt="Exif-Portrait-5.jpg" title="Exif-Portrait-5.jpg" target="_blank">P-5</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-6.jpg" alt="Exif-Portrait-6.jpg" title="Exif-Portrait-6.jpg" target="_blank">P-6</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-7.jpg" alt="Exif-Portrait-7.jpg" title="Exif-Portrait-7.jpg" target="_blank">P-7</a></td><td class="text-center"><a href="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Exif-Portrait-8.jpg" alt="Exif-Portrait-8.jpg" title="Exif-Portrait-8.jpg" target="_blank">P-8</a></td></tr></tbody></table>
+    <form action=@Url.Action("MultipleUpload") method="post" enctype="multipart/form-data">
+        <input id="input-file-1" name="files" multiple type="file" accept="image/*">
+        <div class="checkbox">
+            <label>
+                <input id="toggleOrient" name="tog" type="checkbox" checked>
+                Toggle Auto Orientation
+            </label>
+        </div>
+        <div id="togStatus" class="hint-block"></div>
+    </form>
+</div>
+
+<div id="image-resize-width" class="container mb-5">
+    <h1>Image Resize (Width) </h1>
+    <hr />
+    <p>A single image upload scenario demonstrating a resize width limit of 200 px. The <code>maxImageWidth</code> setting controls the maximum width allowed. Remember to load the <code>piexif.js</code> before the fileinput.js for restoring exif data in jpeg images after resize.						</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-image-1" name="file" type="file" accept="image/*">
+    </form>
+    <div id="kv-success-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Yippee!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div id="kv-success-box" class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="image-resize-height" " class="container mb-5">
+    <h1> Image Resize (Height) </h1>
+    <hr />
+    <p>A single image upload scenario demonstrating a resize height limit of 200 px. The <code>maxImageHeight</code> setting controls the maximum height allowed. You can see that even though <code>resizePreference</code> is set to <code>width</code>, if you do not provide the <code>maxImageWidth</code> then the <code>maxImageHeight</code> setting will be used. Remember to load the <code>piexif.js</code> before the fileinput.js for restoring exif data in jpeg images after resize.						</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-image-2" name="file" type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="image-resize-auto" " class="container mb-5">
+    <h1>Image Resize (Auto) </h1>
+    <hr />
+    <p>An automatic image resize scenario, where you have set both the <code>maxImageWidth</code> and <code>maxImageHeight</code>. The <code>resizePreference</code> is set to <code>height</code> for this example. Note that by default <code>maxImageHeight</code> will be parsed, unless you have an image height less than <code>maxImageHeight</code>. In that case <code>maxImageWidth</code> will be automatically used. Remember to load the <code>piexif.js</code> before the fileinput.js for restoring exif data in jpeg images after resize.</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-image-3" name="file" type="file" accept="image/*">
+    </form>
+</div>
+
+<div id="image-resize-conditional" " class="container mb-5">
+    <h1>Image Resize (Conditional) </h1>
+    <hr />
+    <p>Conditional resize based on <a href="http://plugins.krajee.com/file-input#option-resizeifsizemorethan">resizeIfSizeMoreThan</a> setting in KB. Only the files greater than <code>resizeIfSizeMoreThan</code> setting (which is <code>1000KB</code> in this example) will be resized.</p>
+    <form action=@Url.Action("Upload") method="post" enctype="multipart/form-data">
+        <input id="input-image-4" name="file" type="file" accept="image/*">
+    </form>
+</div>
+
+
