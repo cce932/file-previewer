@@ -78,12 +78,12 @@ function inputAdvancedSetting() {
     let url1 = 'http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/631px-FullMoon2010.jpg',
         url2 = 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Earth_Eastern_Hemisphere.jpg/600px-Earth_Eastern_Hemisphere.jpg';
     $("#input-a1").fileinput({
-        initialPreview: [url1, url2],
-        initialPreviewAsData: true,
-        initialPreviewConfig: [
-            { caption: "Moon.jpg", downloadUrl: url1, size: 930321, width: "120px", key: 1 },
-            { caption: "Earth.jpg", downloadUrl: url2, size: 1218822, width: "120px", key: 2 }
-        ],
+        // initialPreview: [url1, url2],
+        // initialPreviewAsData: true,
+        // initialPreviewConfig: [
+        //     { caption: "Moon.jpg", downloadUrl: url1, size: 930321, width: "120px", key: 1 },
+        //     { caption: "Earth.jpg", downloadUrl: url2, size: 1218822, width: "120px", key: 2 }
+        // ],
         deleteUrl: "/site/file-delete",
         overwriteInitial: false,
         maxFileSize: 100,
@@ -91,12 +91,12 @@ function inputAdvancedSetting() {
     });
 
     $("#input-a2").fileinput({
-        initialPreview: [url1, url2],
-        initialPreviewAsData: true,
-        initialPreviewConfig: [
-            { caption: "Moon.jpg", filename: "MoonFull.jpg", downloadUrl: url1, size: 930321, width: "120px", key: 1 },
-            { caption: "Earth.jpg", filename: "EarthFull.jpg", downloadUrl: url2, size: 1218822, width: "120px", key: 2 }
-        ],
+        // initialPreview: [url1, url2],
+        // initialPreviewAsData: true,
+        // initialPreviewConfig: [
+        //     { caption: "Moon.jpg", filename: "MoonFull.jpg", downloadUrl: url1, size: 930321, width: "120px", key: 1 },
+        //     { caption: "Earth.jpg", filename: "EarthFull.jpg", downloadUrl: url2, size: 1218822, width: "120px", key: 2 }
+        // ],
         deleteUrl: "/site/file-delete",
         overwriteInitial: true,
         maxFileSize: 100,
@@ -183,7 +183,7 @@ function inputAdvancedSetting() {
 function inputResSetting() {
     $("#input-res-1").fileinput({
         enableResumableUpload: true,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
         maxFileCount: 5,
         theme: 'fas',
         deleteUrl: '/site/file-delete',
@@ -199,7 +199,7 @@ function inputResSetting() {
 
     $("#input-res-2").fileinput({
         enableResumableUpload: true,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
         allowedFileTypes: ['image'],
         showCancel: true,
         resumableUploadOptions: {
@@ -221,7 +221,7 @@ function inputResSetting() {
 
     $("#input-res-3").fileinput({
         enableResumableUpload: true,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
         maxFileCount: 5,
         theme: 'fas',
         deleteUrl: '/site/file-delete',
@@ -229,20 +229,20 @@ function inputResSetting() {
             uploadToken: "SOME_VALID_TOKEN"
         },
         overwriteInitial: false,
-        initialPreview: [
-            // TEXT DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
-            // PDF DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
-            // VIDEO DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
-        ],
-        initialPreviewAsData: true, // defaults markup  
-        initialPreviewConfig: [
-            { caption: "Lorem Ipsum.txt", type: "text", size: 1430, url: "/site/file-delete", key: 12 },
-            { type: "pdf", size: 8000, caption: "PDF Sample.pdf", url: "/site/file-delete", key: 14 },
-            { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample.mp4", url: "/site/file-delete", key: 15 }
-        ],
+        // initialPreview: [
+        //     // TEXT DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
+        //     // PDF DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
+        //     // VIDEO DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
+        // ],
+        // initialPreviewAsData: true, // defaults markup  
+        // initialPreviewConfig: [
+        //     { caption: "Lorem Ipsum.txt", type: "text", size: 1430, url: "/site/file-delete", key: 12 },
+        //     { type: "pdf", size: 8000, caption: "PDF Sample.pdf", url: "/site/file-delete", key: 14 },
+        //     { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample.mp4", url: "/site/file-delete", key: 15 }
+        // ],
         preferIconicPreview: true,
         previewFileIconSettings: { // configure your icon file extensions
             'doc': '<i class="fas fa-file-word text-primary"></i>',
@@ -436,58 +436,58 @@ function inputPreviewMangementSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            // IMAGE DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Desert.jpg",
-            // IMAGE DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Lighthouse.jpg",
-            // VIDEO DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4",
-            // OFFICE WORD DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleDOCFile_100kb.doc',
-            // OFFICE EXCEL DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleXLSFile_38kb.xls',
-            // OFFICE POWERPOINT DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SamplePPTFile_500kb.ppt',
-            // TIFF IMAGE FILE
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/multipage_tiff_example.tif',
-            // ADOBE ILLUSTRATOR FILE
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/sample_ai.ai',
-            // ENCAPSULATED POST SCRIPT FILE
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/sample_eps.eps',
-            // PDF DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
-            // TEXT DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
-            // HTML DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleHTML.htm',
-        ],
-        initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
-        initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-        initialPreviewDownloadUrl: 'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/{filename}', // includes the dynamic `filename` tag to be replaced for each config
-        initialPreviewConfig: [
-            { caption: "Desert.jpg", size: 827000, width: "120px", url: "/file-upload-batch/2", key: 1 },
-            { caption: "Lighthouse.jpg", size: 549000, width: "120px", url: "/file-upload-batch/2", key: 2 },
-            {
-                type: "video",
-                size: 375000,
-                filetype: "video/mp4",
-                caption: "KrajeeSample.mp4",
-                url: "/FileInput/MultipleUpload",
-                key: 3,
-                downloadUrl: 'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4', // override url
-                filename: 'KrajeeSample.mp4' // override download filename
-            },
-            { type: "office", size: 102400, caption: "SampleDOCFile_100kb.doc", url: "/file-upload-batch/2", key: 4 },
-            { type: "office", size: 45056, caption: "SampleXLSFile_38kb.xls", url: "/file-upload-batch/2", key: 5 },
-            { type: "office", size: 512000, caption: "SamplePPTFile_500kb.ppt", url: "/file-upload-batch/2", key: 6 },
-            { type: "gdocs", size: 811008, caption: "multipage_tiff_example.tif", url: "/file-upload-batch/2", key: 7 },
-            { type: "gdocs", size: 375808, caption: "sample_ai.ai", url: "/file-upload-batch/2", key: 8 },
-            { type: "gdocs", size: 40960, caption: "sample_eps.eps", url: "/file-upload-batch/2", key: 9 },
-            { type: "pdf", size: 8000, caption: "About.pdf", url: "/file-upload-batch/2", key: 10, downloadUrl: false }, // disable download
-            { type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/file-upload-batch/2", key: 11, downloadUrl: false },  // disable download
-            { type: "html", size: 3550, caption: "LoremIpsum.html", url: "/file-upload-batch/2", key: 12, downloadUrl: false }  // disable download
-        ],
+        // initialPreview: [
+        //     // IMAGE DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Desert.jpg",
+        //     // IMAGE DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Lighthouse.jpg",
+        //     // VIDEO DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4",
+        //     // OFFICE WORD DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleDOCFile_100kb.doc',
+        //     // OFFICE EXCEL DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleXLSFile_38kb.xls',
+        //     // OFFICE POWERPOINT DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SamplePPTFile_500kb.ppt',
+        //     // TIFF IMAGE FILE
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/multipage_tiff_example.tif',
+        //     // ADOBE ILLUSTRATOR FILE
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/sample_ai.ai',
+        //     // ENCAPSULATED POST SCRIPT FILE
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/sample_eps.eps',
+        //     // PDF DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
+        //     // TEXT DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
+        //     // HTML DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleHTML.htm',
+        // ],
+        // initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
+        // initialPreviewFileType: 'image', // image is the default and can be overridden in config below
+        // initialPreviewDownloadUrl: 'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/{filename}', // includes the dynamic `filename` tag to be replaced for each config
+        // initialPreviewConfig: [
+        //     { caption: "Desert.jpg", size: 827000, width: "120px", url: "/file-upload-batch/2", key: 1 },
+        //     { caption: "Lighthouse.jpg", size: 549000, width: "120px", url: "/file-upload-batch/2", key: 2 },
+        //     {
+        //         type: "video",
+        //         size: 375000,
+        //         filetype: "video/mp4",
+        //         caption: "KrajeeSample.mp4",
+        //         url: "/FileInput/MultipleUpload",
+        //         key: 3,
+        //         downloadUrl: 'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4', // override url
+        //         filename: 'KrajeeSample.mp4' // override download filename
+        //     },
+        //     { type: "office", size: 102400, caption: "SampleDOCFile_100kb.doc", url: "/file-upload-batch/2", key: 4 },
+        //     { type: "office", size: 45056, caption: "SampleXLSFile_38kb.xls", url: "/file-upload-batch/2", key: 5 },
+        //     { type: "office", size: 512000, caption: "SamplePPTFile_500kb.ppt", url: "/file-upload-batch/2", key: 6 },
+        //     { type: "gdocs", size: 811008, caption: "multipage_tiff_example.tif", url: "/file-upload-batch/2", key: 7 },
+        //     { type: "gdocs", size: 375808, caption: "sample_ai.ai", url: "/file-upload-batch/2", key: 8 },
+        //     { type: "gdocs", size: 40960, caption: "sample_eps.eps", url: "/file-upload-batch/2", key: 9 },
+        //     { type: "pdf", size: 8000, caption: "About.pdf", url: "/file-upload-batch/2", key: 10, downloadUrl: false }, // disable download
+        //     { type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/file-upload-batch/2", key: 11, downloadUrl: false },  // disable download
+        //     { type: "html", size: 3550, caption: "LoremIpsum.html", url: "/file-upload-batch/2", key: 12, downloadUrl: false }  // disable download
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, places"
@@ -504,22 +504,22 @@ function inputPreviewMangementSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            // IMAGE RAW MARKUP
-            '<img src="https://picsum.photos/id/239/1920/1080" class="kv-preview-data file-preview-image">',
-            // IMAGE RAW MARKUP
-            '<img src="https://picsum.photos/id/279/1920/1080" class="kv-preview-data file-preview-image">',
-            // TEXT RAW MARKUP
-            '<textarea class="kv-preview-data file-preview-text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mauris ut libero fermentum feugiat eu et dui. Mauris condimentum rhoncus enim, sed semper neque vestibulum id. Nulla semper, turpis ut consequat imperdiet, enim turpis aliquet orci, eget venenatis elit sapien non ante. Aliquam neque ipsum, rhoncus id ipsum et, volutpat tincidunt augue. Maecenas dolor libero, gravida nec est at, commodo tempor massa. Sed id feugiat massa. Pellentesque at est eu ante aliquam viverra ac sed est.</textarea>'
-        ],
-        initialPreviewAsData: false, // allows you to set a raw markup
-        initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-        initialPreviewDownloadUrl: 'https://picsum.photos/id/{key}/1920/1080', // includes the dynamic key tag to be replaced for each config
-        initialPreviewConfig: [
-            { type: "image", caption: "Image-1.jpg", size: 847000, url: "/site/file-delete", key: 1 },
-            { type: "image", caption: "Image-2.jpg", size: 817000, url: "/site/file-delete", key: 2 },  // set as raw markup
-            { type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/site/file-delete", key: 3, downloadUrl: false } // do not show download
-        ],
+        // initialPreview: [
+        //     // IMAGE RAW MARKUP
+        //     '<img src="https://picsum.photos/id/239/1920/1080" class="kv-preview-data file-preview-image">',
+        //     // IMAGE RAW MARKUP
+        //     '<img src="https://picsum.photos/id/279/1920/1080" class="kv-preview-data file-preview-image">',
+        //     // TEXT RAW MARKUP
+        //     '<textarea class="kv-preview-data file-preview-text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mauris ut libero fermentum feugiat eu et dui. Mauris condimentum rhoncus enim, sed semper neque vestibulum id. Nulla semper, turpis ut consequat imperdiet, enim turpis aliquet orci, eget venenatis elit sapien non ante. Aliquam neque ipsum, rhoncus id ipsum et, volutpat tincidunt augue. Maecenas dolor libero, gravida nec est at, commodo tempor massa. Sed id feugiat massa. Pellentesque at est eu ante aliquam viverra ac sed est.</textarea>'
+        // ],
+        // initialPreviewAsData: false, // allows you to set a raw markup
+        // initialPreviewFileType: 'image', // image is the default and can be overridden in config below
+        // initialPreviewDownloadUrl: 'https://picsum.photos/id/{key}/1920/1080', // includes the dynamic key tag to be replaced for each config
+        // initialPreviewConfig: [
+        //     { type: "image", caption: "Image-1.jpg", size: 847000, url: "/site/file-delete", key: 1 },
+        //     { type: "image", caption: "Image-2.jpg", size: 817000, url: "/site/file-delete", key: 2 },  // set as raw markup
+        //     { type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/site/file-delete", key: 3, downloadUrl: false } // do not show download
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, nature"
@@ -536,24 +536,24 @@ function inputPreviewMangementSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            // IMAGE DATA
-            'https://picsum.photos/id/700/1920/1080',
-            // IMAGE RAW MARKUP
-            '<img src="https://picsum.photos/id/701/1920/1080" class="kv-preview-data file-preview-image">',
-            // PDF DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
-            // VIDEO DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
-        ],
-        initialPreviewAsData: true, // defaults markup
-        initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-        initialPreviewConfig: [
-            { caption: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 8 },
-            { previewAsData: false, size: 823782, caption: "Business-2.jpg", url: "/site/file-delete", key: 9 },
-            { type: "pdf", size: 8000, caption: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 10 },
-            { type: "video", size: 375000, filetype: "video/mp4", caption: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 11 }
-        ],
+        // initialPreview: [
+        //     // IMAGE DATA
+        //     'https://picsum.photos/id/700/1920/1080',
+        //     // IMAGE RAW MARKUP
+        //     '<img src="https://picsum.photos/id/701/1920/1080" class="kv-preview-data file-preview-image">',
+        //     // PDF DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
+        //     // VIDEO DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
+        // ],
+        // initialPreviewAsData: true, // defaults markup
+        // initialPreviewFileType: 'image', // image is the default and can be overridden in config below
+        // initialPreviewConfig: [
+        //     { caption: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 8 },
+        //     { previewAsData: false, size: 823782, caption: "Business-2.jpg", url: "/site/file-delete", key: 9 },
+        //     { type: "pdf", size: 8000, caption: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 10 },
+        //     { type: "video", size: 375000, filetype: "video/mp4", caption: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 11 }
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, nature"
@@ -570,27 +570,27 @@ function inputPreviewMangementSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            // IMAGE DATA
-            'https://picsum.photos/id/702/1920/1080',
-            // IMAGE RAW MARKUP
-            '<img src="https://picsum.photos/id/703/1920/1080" class="kv-preview-data file-preview-image">',
-            // TEXT DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
-            // PDF DATA
-            'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
-            // VIDEO DATA
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
-        ],
-        initialPreviewAsData: true, // defaults markup
-        initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-        initialPreviewConfig: [
-            { caption: "Business 1", filename: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 11 },
-            { previewAsData: false, size: 823782, caption: "Business 2", filename: "Business-2.jpg", url: "/site/file-delete", key: 13 },
-            { caption: "Lorem Ipsum", filename: "LoremIpsum.txt", type: "text", size: 1430, url: "/site/file-delete", key: 12 },
-            { type: "pdf", size: 8000, caption: "PDF Sample", filename: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 14 },
-            { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample", filename: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 15 }
-        ],
+        // initialPreview: [
+        //     // IMAGE DATA
+        //     'https://picsum.photos/id/702/1920/1080',
+        //     // IMAGE RAW MARKUP
+        //     '<img src="https://picsum.photos/id/703/1920/1080" class="kv-preview-data file-preview-image">',
+        //     // TEXT DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/SampleTextFile_10kb.txt',
+        //     // PDF DATA
+        //     'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
+        //     // VIDEO DATA
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4"
+        // ],
+        // initialPreviewAsData: true, // defaults markup
+        // initialPreviewFileType: 'image', // image is the default and can be overridden in config below
+        // initialPreviewConfig: [
+        //     { caption: "Business 1", filename: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 11 },
+        //     { previewAsData: false, size: 823782, caption: "Business 2", filename: "Business-2.jpg", url: "/site/file-delete", key: 13 },
+        //     { caption: "Lorem Ipsum", filename: "LoremIpsum.txt", type: "text", size: 1430, url: "/site/file-delete", key: 12 },
+        //     { type: "pdf", size: 8000, caption: "PDF Sample", filename: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 14 },
+        //     { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample", filename: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 15 }
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, nature",
@@ -649,22 +649,22 @@ function inputPreviewMangementSetting() {
         theme: 'explorer-fas',
         uploadAsync: true,
         reversePreviewOrder: true,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
         overwriteInitial: false,
-        initialPreview: [
-            "https://picsum.photos/id/900/1920/1080",
-            "https://picsum.photos/id/901/1920/1080",
-            "https://picsum.photos/id/902/1920/1080",
-            "https://picsum.photos/id/903/1920/1080",
-            "https://picsum.photos/id/904/1920/1080"
-        ],
-        initialPreviewConfig: [
-            { caption: "Picture-3.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 3 },
-            { caption: "Picture-4.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 4 },
-            { caption: "Picture-5.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 5 },
-            { caption: "Picture-6.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 6 },
-            { caption: "Picture-7.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 7 }
-        ],
+        // initialPreview: [
+        //     "https://picsum.photos/id/900/1920/1080",
+        //     "https://picsum.photos/id/901/1920/1080",
+        //     "https://picsum.photos/id/902/1920/1080",
+        //     "https://picsum.photos/id/903/1920/1080",
+        //     "https://picsum.photos/id/904/1920/1080"
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Picture-3.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 3 },
+        //     { caption: "Picture-4.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 4 },
+        //     { caption: "Picture-5.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 5 },
+        //     { caption: "Picture-6.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 6 },
+        //     { caption: "Picture-7.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 7 }
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     }).on('filesorted', function (e, params) {
         console.log('Modified initial preview is ', $("#input-pr-rev").data('fileinput').initialPreview);
@@ -674,13 +674,13 @@ function inputPreviewMangementSetting() {
         // uploadUrl: "/file-upload-batch/1",
         pdfRendererUrl: 'https://plugins.krajee.com/pdfjs/web/viewer.html',
         overwriteInitial: false,
-        initialPreviewAsData: true,
-        initialPreview: [
-            'https://plugins.krajee.com/samples/sample-2.pdf'
-        ],
-        initialPreviewConfig: [
-            { type: 'pdf', size: 3072 }
-        ]
+        // initialPreviewAsData: true,
+        // initialPreview: [
+        //     'https://plugins.krajee.com/samples/sample-2.pdf'
+        // ],
+        // initialPreviewConfig: [
+        //     { type: 'pdf', size: 3072 }
+        // ]
     });
 }
 
@@ -974,11 +974,11 @@ function inputAutoReplaceSetting() {
         overwriteInitial: true,
         showUploadedThumbs: false,
         maxFileCount: 1,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://placeimg.com/1920/1080/any/grayscale'>"
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://placeimg.com/1920/1080/any/grayscale'>"
+        // ],
         initialCaption: 'Initial-Image.jpg',
-        initialPreviewShowDelete: false,
+        // initialPreviewShowDelete: false,
         showRemove: false,
         showClose: false,
         layoutTemplates: { actionDelete: '' }, // disable thumbnail deletion
@@ -999,16 +999,16 @@ function inputFileCountSetting() {
         maxFileCount: 4,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/909/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/910/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/911/1920/1080'>"
-        ],
-        initialPreviewConfig: [
-            { caption: "Scene-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Scene-2.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
-            { caption: "Scene-3.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 }
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/909/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/910/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/911/1920/1080'>"
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Scene-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Scene-2.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
+        //     { caption: "Scene-3.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 }
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -1017,14 +1017,14 @@ function inputFileCountSetting() {
         minFileCount: 2,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1049/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1050/1920/1080'>"
-        ],
-        initialPreviewConfig: [
-            { caption: "Places-1.jpg", size: 823677, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Places-2.jpg", size: 926367, width: "120px", url: "/site/file-delete", key: 2 }
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1049/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1050/1920/1080'>"
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Places-1.jpg", size: 823677, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Places-2.jpg", size: 926367, width: "120px", url: "/site/file-delete", key: 2 }
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -1032,16 +1032,16 @@ function inputFileCountSetting() {
         maxFileCount: 4,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1045/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1055/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1056/1920/1080'>",
-        ],
-        initialPreviewConfig: [
-            { caption: "Nature-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Nature-2.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
-            { caption: "Nature-3.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 },
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1045/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1055/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1056/1920/1080'>",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Nature-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Nature-2.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
+        //     { caption: "Nature-3.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 },
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -1049,14 +1049,14 @@ function inputFileCountSetting() {
         minFileCount: 2,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1047/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1054/1920/1080'>",
-        ],
-        initialPreviewConfig: [
-            { caption: "City-1.jpg", size: 823677, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "City-2.jpg", size: 926367, width: "120px", url: "/site/file-delete", key: 2 },
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1047/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1054/1920/1080'>",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "City-1.jpg", size: 823677, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "City-2.jpg", size: 926367, width: "120px", url: "/site/file-delete", key: 2 },
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -1064,18 +1064,18 @@ function inputFileCountSetting() {
         // uploadUrl: "/FileInput/MultipleUpload",
         maxFileCount: 3,
         maxTotalFileCount: 8,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
         overwriteInitial: false,
-        initialPreview: [
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Desert.jpg",
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Koala.jpg",
-            "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Jellyfish.jpg",
-        ],
-        initialPreviewConfig: [
-            { caption: "Desert.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Koala.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
-            { caption: "Jellyfish.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 }
-        ],
+        // initialPreview: [
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Desert.jpg",
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Koala.jpg",
+        //     "https://kartik-v.github.io/bootstrap-fileinput-samples/samples/Jellyfish.jpg",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Desert.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Koala.jpg", size: 982873, width: "120px", url: "/site/file-delete", key: 2 },
+        //     { caption: "Jellyfish.jpg", size: 567728, width: "120px", url: "/site/file-delete", key: 3 }
+        // ],
     });
 
     $("#input-freqd-1").fileinput({
@@ -1099,13 +1099,13 @@ function inputFileCountSetting() {
         required: true,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreviewAsData: true,
-        initialPreview: [
-            "https://picsum.photos/id/237/1920/1080"
-        ],
-        initialPreviewConfig: [
-            { caption: "Animals-6.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 }
-        ],
+        // initialPreviewAsData: true,
+        // initialPreview: [
+        //     "https://picsum.photos/id/237/1920/1080"
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Animals-6.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 }
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
     $(".btn-upload-4").on("click", function () {
@@ -1131,13 +1131,13 @@ function inputFileCountSetting() {
         required: true,
         validateInitialCount: true,
         overwriteInitial: false,
-        initialPreviewAsData: true,
-        initialPreview: [
-            "https://picsum.photos/id/238/1920/1080"
-        ],
-        initialPreviewConfig: [
-            { caption: "City-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 }
-        ],
+        // initialPreviewAsData: true,
+        // initialPreview: [
+        //     "https://picsum.photos/id/238/1920/1080"
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "City-1.jpg", size: 628782, width: "120px", url: "/site/file-delete", key: 1 }
+        // ],
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
     $(".btn-upload-4").on("click", function () {
@@ -1211,14 +1211,14 @@ function inputPluginMethodsSetting() {
     $('#file-5').fileinput({
         overwriteInitial: false,
         validateInitialCount: true,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/260/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/261/1920/1080'>",
-        ],
-        initialPreviewConfig: [
-            { caption: "Nature-1.jpg", width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Nature-2.jpg", width: "120px", url: "/site/file-delete", key: 2 }
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/260/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/261/1920/1080'>",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Nature-1.jpg", width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Nature-2.jpg", width: "120px", url: "/site/file-delete", key: 2 }
+        // ],
     }).on('filebeforedelete', function () {
         let aborted = !window.confirm('Are you sure you want to delete this file?');
         if (aborted) {
@@ -1242,14 +1242,14 @@ function inputPluginMethodsSetting() {
     $('#file-6').fileinput({
         overwriteInitial: false,
         validateInitialCount: true,
-        initialPreview: [
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1038/1920/1080'>",
-            "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1039/1920/1080'>",
-        ],
-        initialPreviewConfig: [
-            { caption: "Nature-1.jpg", width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "Cats-2.jpg", width: "120px", url: "/site/file-delete", key: 2 }
-        ],
+        // initialPreview: [
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1038/1920/1080'>",
+        //     "<img class='kv-preview-data file-preview-image' src='https://picsum.photos/id/1039/1920/1080'>",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Nature-1.jpg", width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "Cats-2.jpg", width: "120px", url: "/site/file-delete", key: 2 }
+        // ],
     }).on('filebeforedelete', function () {
         return new Promise(function (resolve, reject) {
             $.confirm({
@@ -1296,16 +1296,16 @@ function inputAjaxSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            "http://lorempixel.com/800/460/people/1",
-            "http://lorempixel.com/800/460/people/2"
-        ],
-        initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
-        initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-        initialPreviewConfig: [
-            { caption: "People-1.jpg", size: 576237, width: "120px", url: "/site/file-delete", key: 1 },
-            { caption: "People-2.jpg", size: 932882, width: "120px", url: "/site/file-delete", key: 2 },
-        ],
+        // initialPreview: [
+        //     "http://lorempixel.com/800/460/people/1",
+        //     "http://lorempixel.com/800/460/people/2"
+        // ],
+        // initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
+        // initialPreviewFileType: 'image', // image is the default and can be overridden in config below
+        // initialPreviewConfig: [
+        //     { caption: "People-1.jpg", size: 576237, width: "120px", url: "/site/file-delete", key: 1 },
+        //     { caption: "People-2.jpg", size: 932882, width: "120px", url: "/site/file-delete", key: 2 },
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, places",
@@ -1326,7 +1326,7 @@ function inputAjaxSetting() {
             return { key: index };
         },
         overwriteInitial: false,
-        initialPreviewAsData: true // identify if you are sending preview data only and not the markup
+        // initialPreviewAsData: true // identify if you are sending preview data only and not the markup
     });
 
     $("#input-704").fileinput({
@@ -1336,7 +1336,7 @@ function inputAjaxSetting() {
         overwriteInitial: false,
         minFileCount: 1,
         maxFileCount: 5,
-        initialPreviewAsData: true // identify if you are sending preview data only and not the markup
+        // initialPreviewAsData: true // identify if you are sending preview data only and not the markup
     });
 
     /*AJAX 6*/
@@ -1351,7 +1351,7 @@ function inputAjaxSetting() {
         minFileCount: 1,
         maxFileCount: 5,
         browseOnZoneClick: true,
-        initialPreviewAsData: true,
+        // initialPreviewAsData: true,
     }).on("filebatchselected", function (event, files) {
         $el1.fileinput("upload");
     });
@@ -1435,24 +1435,24 @@ function inputAjaxSetting() {
             '{TAG_CSS_NEW}': '',      // new thumbnail input
             '{TAG_CSS_INIT}': 'kv-hidden'  // hide the initial input
         },
-        initialPreview: [
-            '<img class="file-preview-image kv-preview-data" src="http://lorempixel.com/800/460/city/1">',
-            '<img class="file-preview-image kv-preview-data" src="http://lorempixel.com/800/460/city/2">',
-        ],
-        initialPreviewConfig: [
-            { caption: "City-1.jpg", size: 327892, url: "/site/file-delete", key: 1 },
-            { caption: "City-2.jpg", size: 438828, url: "/site/file-delete", key: 2 },
-        ],
-        initialPreviewThumbTags: [
-            { '{TAG_VALUE}': 'City-1.jpg', '{TAG_CSS_NEW}': 'kv-hidden', '{TAG_CSS_INIT}': '' },
-            {
-                '{TAG_VALUE}': function () { // callback example
-                    return 'City-2.jpg';
-                },
-                '{TAG_CSS_NEW}': 'kv-hidden',
-                '{TAG_CSS_INIT}': ''
-            }
-        ],
+        // initialPreview: [
+        //     '<img class="file-preview-image kv-preview-data" src="http://lorempixel.com/800/460/city/1">',
+        //     '<img class="file-preview-image kv-preview-data" src="http://lorempixel.com/800/460/city/2">',
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "City-1.jpg", size: 327892, url: "/site/file-delete", key: 1 },
+        //     { caption: "City-2.jpg", size: 438828, url: "/site/file-delete", key: 2 },
+        // ],
+        // initialPreviewThumbTags: [
+        //     { '{TAG_VALUE}': 'City-1.jpg', '{TAG_CSS_NEW}': 'kv-hidden', '{TAG_CSS_INIT}': '' },
+        //     {
+        //         '{TAG_VALUE}': function () { // callback example
+        //             return 'City-2.jpg';
+        //         },
+        //         '{TAG_CSS_NEW}': 'kv-hidden',
+        //         '{TAG_CSS_INIT}': ''
+        //     }
+        // ],
         uploadExtraData: function () {  // callback example
             var out = {}, key, i = 0;
             $('.kv-input:visible').each(function () {
@@ -1470,16 +1470,16 @@ function inputAjaxSetting() {
         minFileCount: 2,
         maxFileCount: 5,
         overwriteInitial: false,
-        initialPreview: [
-            "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/1'>",
-            "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/2'>",
-            "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/3'>",
-        ],
-        initialPreviewConfig: [
-            { caption: "Food-1.jpg", size: 329892, url: "/site/file-delete", key: 1 },
-            { caption: "Food-2.jpg", size: 872378, url: "/site/file-delete", key: 2 },
-            { caption: "Food-3.jpg", size: 632762, url: "/site/file-delete", key: 3 },
-        ],
+        // initialPreview: [
+        //     "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/1'>",
+        //     "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/2'>",
+        //     "<img class='file-preview-image kv-preview-data' src='http://lorempixel.com/800/460/nature/3'>",
+        // ],
+        // initialPreviewConfig: [
+        //     { caption: "Food-1.jpg", size: 329892, url: "/site/file-delete", key: 1 },
+        //     { caption: "Food-2.jpg", size: 872378, url: "/site/file-delete", key: 2 },
+        //     { caption: "Food-3.jpg", size: 632762, url: "/site/file-delete", key: 3 },
+        // ],
         uploadExtraData: {
             img_key: "1000",
             img_keywords: "happy, nature",
