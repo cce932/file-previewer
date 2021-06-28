@@ -175,7 +175,7 @@ function inputAdvancedSetting() {
     });
 
     $("#input-a11").fileinput({
-        uploadUrl: '/file-upload-batch/2',
+        // uploadUrl: '/FileInput/MultipleUpload',
         maxFilePreviewSize: 10240
     });
 }
@@ -348,7 +348,7 @@ function inputFolderSetting() {
     });
 
     $("#input-folder-3").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         hideThumbnailContent: true // hide image, pdf, text or other content in the thumbnail preview
     });
 }
@@ -384,7 +384,7 @@ function inputMultiLanguageSetting() {
 
     $("#input-fr").fileinput({
         language: "fr",
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -397,41 +397,41 @@ function inputMultiLanguageSetting() {
 function inputThemeSetting() {
     $("#input-fa").fileinput({
         theme: "fa",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
     });
 
     $("#input-fa-1").fileinput({
         theme: "fa",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         hideThumbnailContent: true // hide image, pdf, text or other content in the thumbnail preview
     });
 
     $("#input-fas").fileinput({
         theme: "fas",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
     });
 
     $("#input-fas-1").fileinput({
         theme: "fas",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         hideThumbnailContent: true // hide image, pdf, text or other content in the thumbnail preview
     });
 
     $("#input-gly").fileinput({
         theme: "gly",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
     });
 
     $("#input-gly-1").fileinput({
         theme: "gly",
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         hideThumbnailContent: true // hide image, pdf, text or other content in the thumbnail preview
     });
 }
 
 function inputPreviewMangementSetting() {
     $("#input-pd").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -473,7 +473,7 @@ function inputPreviewMangementSetting() {
                 size: 375000,
                 filetype: "video/mp4",
                 caption: "KrajeeSample.mp4",
-                url: "/file-upload-batch/2",
+                url: "/FileInput/MultipleUpload",
                 key: 3,
                 downloadUrl: 'https://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4', // override url
                 filename: 'KrajeeSample.mp4' // override download filename
@@ -499,7 +499,7 @@ function inputPreviewMangementSetting() {
     });
 
     $("#input-pr").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -531,7 +531,7 @@ function inputPreviewMangementSetting() {
     });
 
     $("#input-pa").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -551,8 +551,8 @@ function inputPreviewMangementSetting() {
         initialPreviewConfig: [
             { caption: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 8 },
             { previewAsData: false, size: 823782, caption: "Business-2.jpg", url: "/site/file-delete", key: 9 },
-            { type: "pdf", size: 8000, caption: "PDF-Sample.pdf", url: "/file-upload-batch/2", key: 10 },
-            { type: "video", size: 375000, filetype: "video/mp4", caption: "KrajeeSample.mp4", url: "/file-upload-batch/2", key: 11 }
+            { type: "pdf", size: 8000, caption: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 10 },
+            { type: "video", size: 375000, filetype: "video/mp4", caption: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 11 }
         ],
         uploadExtraData: {
             img_key: "1000",
@@ -565,7 +565,7 @@ function inputPreviewMangementSetting() {
     });
 
     $("#input-iconic").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -588,8 +588,8 @@ function inputPreviewMangementSetting() {
             { caption: "Business 1", filename: "Business-1.jpg", size: 762980, url: "/site/file-delete", key: 11 },
             { previewAsData: false, size: 823782, caption: "Business 2", filename: "Business-2.jpg", url: "/site/file-delete", key: 13 },
             { caption: "Lorem Ipsum", filename: "LoremIpsum.txt", type: "text", size: 1430, url: "/site/file-delete", key: 12 },
-            { type: "pdf", size: 8000, caption: "PDF Sample", filename: "PDF-Sample.pdf", url: "/file-upload-batch/2", key: 14 },
-            { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample", filename: "KrajeeSample.mp4", url: "/file-upload-batch/2", key: 15 }
+            { type: "pdf", size: 8000, caption: "PDF Sample", filename: "PDF-Sample.pdf", url: "/FileInput/MultipleUpload", key: 14 },
+            { type: "video", size: 375000, filetype: "video/mp4", caption: "Krajee Sample", filename: "KrajeeSample.mp4", url: "/FileInput/MultipleUpload", key: 15 }
         ],
         uploadExtraData: {
             img_key: "1000",
@@ -645,7 +645,7 @@ function inputPreviewMangementSetting() {
     });
 
     $("#input-pr-rev").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         theme: 'explorer-fas',
         uploadAsync: true,
         reversePreviewOrder: true,
@@ -671,7 +671,7 @@ function inputPreviewMangementSetting() {
     })
 
     $('#file-kv-pdf').fileinput({
-        uploadUrl: "/file-upload-batch/1",
+        // uploadUrl: "/file-upload-batch/1",
         pdfRendererUrl: 'https://plugins.krajee.com/pdfjs/web/viewer.html',
         overwriteInitial: false,
         initialPreviewAsData: true,
@@ -686,7 +686,7 @@ function inputPreviewMangementSetting() {
 
 function inputFilePreviewIconSetting() {
     $("#input-ficons-1").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: true,
         previewFileIcon: '<i class="fas fa-file"></i>',
         allowedPreviewTypes: null, // set to empty, null or false to disable preview for all types
@@ -701,7 +701,7 @@ function inputFilePreviewIconSetting() {
     });
 
     $("#input-ficons-2").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         previewFileIcon: '<i class="fas fa-file"></i>',
         allowedPreviewTypes: null, // set to empty, null or false to disable preview for all types
@@ -746,7 +746,7 @@ function inputFilePreviewIconSetting() {
     });
 
     $("#input-ficons-3").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         previewFileIcon: '<i class="fas fa-file"></i>',
         allowedPreviewTypes: ['image', 'text'], // allow only preview of image & text files
         previewFileIconSettings: {
@@ -759,7 +759,7 @@ function inputFilePreviewIconSetting() {
     });
 
     $("#input-ficons-4").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         previewFileIcon: '<i class="fas fa-file"></i>',
         allowedPreviewTypes: null, // disable preview of standard types
         allowedPreviewMimeTypes: ['image/jpeg', 'text/javascript'], // allow content to be shown only for certain mime types 
@@ -774,7 +774,7 @@ function inputFilePreviewIconSetting() {
     });
 
     $("#input-ficons-5").fileinput({
-        uploadUrl:" /FileInput/MultipleUpload",
+        // // uploadUrl:" /FileInput/MultipleUpload",
         uploadAsync: false,
         previewFileIcon: '<i class="fas fa-file"></i>',
         preferIconicPreview: true, // this will force thumbnails to display icons for following file extensions
@@ -823,7 +823,7 @@ function inputFilePreviewIconSetting() {
     });
 
     $("#input-ficons-6").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         previewFileIcon: '<i class="fas fa-file"></i>',
         preferIconicZoomPreview: true, // this will force zoom preview thumbnails to display icons for following file extensions
@@ -874,14 +874,14 @@ function inputFilePreviewIconSetting() {
 
 function inputImageDimensionsSetting() {
     $("#input-dim-1").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         minImageWidth: 50,
         minImageHeight: 50
     });
 
     $("#input-dim-2").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         maxImageWidth: 250,
         maxImageHeight: 250
@@ -890,20 +890,20 @@ function inputImageDimensionsSetting() {
 
 function inputImageManagementSetting() {
     $("#input-file-1").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         autoOrientImage: true
     });
     $("#toggleOrient").on('change', function () {
         var val = $(this).prop('checked');
         $("#input-file-1").fileinput('refresh', {
-            uploadUrl: "/FileInput/MultipleUpload",
+            // uploadUrl: "/FileInput/MultipleUpload",
             autoOrientImage: val
         });
         $('#togStatus').html('Fileinput is reset and <samp>autoOrientImage</samp> is set to <em>' + (val ? 'true' : 'false') + '</em>. Retry by selecting images again.');
     });
 
     $("#input-image-1").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         maxImageWidth: 200,
         maxFileCount: 1,
@@ -916,7 +916,7 @@ function inputImageManagementSetting() {
     });
 
     $("#input-image-2").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         maxImageHeight: 150,
         maxFileCount: 1,
@@ -929,7 +929,7 @@ function inputImageManagementSetting() {
     });
 
     $("#input-image-3").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         maxImageWidth: 200,
         maxImageHeight: 150,
@@ -944,7 +944,7 @@ function inputImageManagementSetting() {
     });
 
     $("#input-image-4").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         allowedFileExtensions: ["jpg", "png", "gif"],
         maxImageWidth: 200,
         maxImageHeight: 150,
@@ -962,14 +962,14 @@ function inputImageManagementSetting() {
 
 function inputAutoReplaceSetting() {
     $("#input-repl-1").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         autoReplace: true,
         maxFileCount: 1,
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
     $("#input-repl-1a").fileinput({
-        uploadUrl: "/FileInput/Upload",
+        // uploadUrl: "/FileInput/Upload",
         autoReplace: true,
         overwriteInitial: true,
         showUploadedThumbs: false,
@@ -986,7 +986,7 @@ function inputAutoReplaceSetting() {
     });
 
     $("#input-repl-2").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         autoReplace: true,
         maxFileCount: 5,
         allowedFileExtensions: ["jpg", "png", "gif"]
@@ -995,7 +995,7 @@ function inputAutoReplaceSetting() {
 
 function inputFileCountSetting() {
     $("#input-fcount-1").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         maxFileCount: 4,
         validateInitialCount: true,
         overwriteInitial: false,
@@ -1013,7 +1013,7 @@ function inputFileCountSetting() {
     });
 
     $("#input-fcount-2").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         minFileCount: 2,
         validateInitialCount: true,
         overwriteInitial: false,
@@ -1061,7 +1061,7 @@ function inputFileCountSetting() {
     });
 
     $("#kartik-input-705").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         maxFileCount: 3,
         maxTotalFileCount: 8,
         initialPreviewAsData: true,
@@ -1079,7 +1079,7 @@ function inputFileCountSetting() {
     });
 
     $("#input-freqd-1").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         showUpload: false,
         showRemove: false,
         required: true,
@@ -1093,7 +1093,7 @@ function inputFileCountSetting() {
     });
 
     $("#input-freqd-2").fileinput({
-        uploadUrl: "/file-upload-batch/2",
+        // uploadUrl: "/FileInput/MultipleUpload",
         showUpload: false,
         showRemove: false,
         required: true,
@@ -1279,19 +1279,19 @@ function inputPluginMethodsSetting() {
 
 function inputAjaxSetting() {
     $("#input-700").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         maxFileCount: 5
     });
 
     $("#input-701").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         maxFileCount: 5
     });
 
     $("#input-702").fileinput({
         theme: 'fa',
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -1319,7 +1319,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-703").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         minFileCount: 1,
         maxFileCount: 5,
         uploadExtraData: function (previewId, index) {
@@ -1331,7 +1331,7 @@ function inputAjaxSetting() {
 
     $("#input-704").fileinput({
         allowedFileExtensions: ['jpg', 'png', 'gif'],
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         overwriteInitial: false,
         minFileCount: 1,
@@ -1343,7 +1343,7 @@ function inputAjaxSetting() {
     let $el1 = $("#input-705");
     $el1.fileinput({
         allowedFileExtensions: ['jpg', 'png', 'gif'],
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: true,
         deleteUrl: "/site/file-delete",
         showUpload: false, // hide upload button
@@ -1425,7 +1425,7 @@ function inputAjaxSetting() {
         '</div>';
 
     $el2.fileinput({
-        uploadUrl: '/FileInput/MultipleUpload',
+        // uploadUrl: '/FileInput/MultipleUpload',
         uploadAsync: false,
         maxFileCount: 5,
         overwriteInitial: false,
@@ -1465,7 +1465,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-707").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         minFileCount: 2,
         maxFileCount: 5,
@@ -1494,7 +1494,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-708").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         maxFileCount: 5
     }).on('filebatchpreupload', function (event, data) {
@@ -1508,7 +1508,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-709").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: true,
         showPreview: false,
         allowedFileExtensions: ['jpg', 'png', 'gif'],
@@ -1524,7 +1524,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-710").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: false,
         showPreview: false,
         allowedFileExtensions: ['jpg', 'png', 'gif'],
@@ -1543,7 +1543,7 @@ function inputAjaxSetting() {
     });
 
     $("#input-711").fileinput({
-        uploadUrl: "/FileInput/MultipleUpload",
+        // uploadUrl: "/FileInput/MultipleUpload",
         maxFileCount: 5,
         showBrowse: false,
         browseOnZoneClick: true
