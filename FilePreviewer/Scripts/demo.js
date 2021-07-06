@@ -97,7 +97,7 @@ function inputAdvancedSetting() {
         //     { caption: "Moon.jpg", filename: "MoonFull.jpg", downloadUrl: url1, size: 930321, width: "120px", key: 1 },
         //     { caption: "Earth.jpg", filename: "EarthFull.jpg", downloadUrl: url2, size: 1218822, width: "120px", key: 2 }
         // ],
-        deleteUrl: "/site/file-delete",
+        // deleteUrl: "/site/file-delete",
         overwriteInitial: true,
         maxFileSize: 100,
         initialCaption: "The Moon and the Earth"
@@ -186,7 +186,7 @@ function inputResSetting() {
         // initialPreviewAsData: true,
         maxFileCount: 5,
         theme: 'fas',
-        deleteUrl: '/site/file-delete',
+        // deleteUrl: '/site/file-delete',
         fileActionSettings: {
             showZoom: function (config) {
                 if (config.type === 'pdf' || config.type === 'image') {
@@ -208,7 +208,7 @@ function inputResSetting() {
         },
         maxFileCount: 5,
         theme: 'fas',
-        deleteUrl: '/site/file-delete',
+        // deleteUrl: '/site/file-delete',
         fileActionSettings: {
             showZoom: function (config) {
                 if (config.type === 'pdf' || config.type === 'image') {
@@ -224,7 +224,7 @@ function inputResSetting() {
         // initialPreviewAsData: true,
         maxFileCount: 5,
         theme: 'fas',
-        deleteUrl: '/site/file-delete',
+        // deleteUrl: '/site/file-delete',
         uploadExtraData: {
             uploadToken: "SOME_VALID_TOKEN"
         },
@@ -1345,7 +1345,7 @@ function inputAjaxSetting() {
         allowedFileExtensions: ['jpg', 'png', 'gif'],
         // uploadUrl: "/FileInput/MultipleUpload",
         uploadAsync: true,
-        deleteUrl: "/site/file-delete",
+        // deleteUrl: "/site/file-delete",
         showUpload: false, // hide upload button
         overwriteInitial: false, // append files to initial preview
         minFileCount: 1,
